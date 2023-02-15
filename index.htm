@@ -2,405 +2,94 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <!-- meta tags, fill them with website meta infos -->
-  <meta name="description" content="Description of your web page" />
-  <meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..." />
-  <meta name="author" content="Name of the author/owner of the webpage's content" />
+   <!-- meta tags, fill them with website meta infos -->
+   <meta name="description" content="Description of your web page" />
+   <meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..." />
+   <meta name="author" content="Name of the author/owner of the webpage's content" />
 
-  <!-- favicons -->
-  <!--
+   <!-- favicons -->
+   <!--
 	very minimal use of favicon with a 512x512px .png favicon,
 	use 'https://www.favicon-generator.org' to generate a more extensive favicon code
 -->
-  <link rel="icon" href="assets/images/favicon/favicon.png" sizes="32x32" />
-  <link rel="icon" href="assets/images/favicon/favicon.png" sizes="192x192" />
+   <link rel="icon" href="assets/images/favicon/favicon.png" sizes="32x32" />
+   <link rel="icon" href="assets/images/favicon/favicon.png" sizes="192x192" />
 
-  <!-- meta properties for social medias, twitter = twitter, og:... = facebook -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Webpage title">
-  <meta name="twitter:description" content="Description of your web page">
-  <meta property="twitter:image:src" content="assets/images/imageforsocialmedias.jpg">
-  <meta property="og:title" content="Webpage title" />
-  <meta property="og:url" content="http://www.mywebsite.com/mywebpage" />
-  <meta property="og:description" content="Description of your webpage" />
-  <meta property="og:image" content="assets/images/imageforsocialmedias.jpg" />
+   <!-- meta properties for social medias, twitter = twitter, og:... = facebook -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Webpage title">
+   <meta name="twitter:description" content="Description of your web page">
+   <meta property="twitter:image:src" content="assets/images/imageforsocialmedias.jpg">
+   <meta property="og:title" content="Webpage title" />
+   <meta property="og:url" content="http://www.mywebsite.com/mywebpage" />
+   <meta property="og:description" content="Description of your webpage" />
+   <meta property="og:image" content="assets/images/imageforsocialmedias.jpg" />
 
-  <!-- map realted links: css file + js library-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-  <script src="js/leaflet-providers.js"></script>
 
-  <!-- website title, visible in the browser window and on link sharing -->
-  <title>Lara's Thesis Wouhooou</title>
+   <!-- website title, visible in the browser window and on link sharing -->
+   <title>Lara's Thesis Wouhooou</title>
 
-  <!-- links for extensions and dependencies -->
+   <!-- links for extensions and dependencies -->
 
-  <!-- css -->
-  <!-- normalize 'resets' some browser properties to make them look the same across browsers -->
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css?ver=1.0">
+   <!-- css -->
+   <!-- normalize 'resets' some browser properties to make them look the same across browsers -->
+   <link rel="stylesheet" href="assets/css/normalize.css">
+   <link rel="stylesheet" href="assets/css/style.css?ver=1.0">
 
-  <!-- js -->
-  <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
+   <!-- js -->
+   <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+   <script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
 
 </head>
 
 <body>
+   <!-- webpage content goes here -->
 
-
-
-  <!-- webpage content goes here -->
-
-  <div class="page-wrapper">
-    <div class="grid-content">
-
-      <div class="nav-tab">
-        <header>
-          <div class="header-content">
-            <h1> 5 stories of independent (feminist) publishing</h1>
-            <p> A thesis written by Lara Dautun</p>
-
-            <nav>
-              <ul>
-                <li><a href="#intro">
-                    <h2>Introduction</h2>
-                  </a></li>
-                <li><a href="#chapter-1">
-                    <h2> Chapter 1</h2> Publishing. Publishing independently. Publishing
-                    Feministly
-                  </a></li>
-                <li><a href="#chapter-2">
-                    <h2> Chapter 2</h2> Atalanta — Love, anarchy and wilderness
-                  </a></li>
-                <li><a href="#chapter-3">
-                    <h2> Chapter 3</h2> Poetesses, leopards and financial struggles
-                  </a>
-                </li>
-                <li><a href="#chapter-3">
-                    <h2> Chapter 4</h2> The Researcher, the designer and the archives:
-                    treasure
-                    hunts and funambulism
-                  </a></li>
-                <li><a href="#epilogue">
-                    <h2> Epilogue</h2> The end?
-                  </a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-
-      </div>
-
-
-
-      <div class="pageLeft">
-        <div class="pageLeftContent">
-
-          <img class="archiveImage" id="image-1" src="assets/images/Sara/sara-04.png" alt="Girl in a jacket" width="70%">
-          <img class="archiveImage" id="image-2" src="assets/images/Sara/archive-01.jpeg" width="70%">
-          <img class="archiveImage" id="image-3" src="assets/images/Sara/archive-02.jpeg" width="70%">
-          <img class="archiveImage" id="image-4" src="assets/images/Sara/sara-02.png" alt="Girl in a jacket" width="70%">
-          <img class="archiveImage" id="image-5" src="assets/images/Sara/sara-01.png" alt="Girl in a jacket" width="70%">
-
-          <p class="note"> A mimeograph (or mimeo, or stencil duplicator) is a low-cost duplicating machine that works by forcing ink through a stencil onto paper. Early fanzines were printed by mimeograph because the machines and supplies were
-            widely available
-            and inexpensive. Beginning in the late 1960s and continuing into the 1970s, photocopying gradually displaced mimeographs, spirit duplicators, and hectographs.</p>
-
-
-        </div>
-      </div>
-
-      <div class="pageRight">
-        <div class="pageRightContent">
-          <div class="titlePage">
-            <h1> <span class="uppercase"> Spreading the Word</span> <br> <br> 5 stories of independent (feminist) publishing</h1>
-          </div>
-
-          <div class="tableContent">
-            <nav>
-              <ul>
-                <li><a href="#intro">
-                    <h3><span class="uppercase">Preface</span>
-                    </h3>
-                  </a></li>
-
-                <li><a href="#prologue">
-                    <h3><span class="uppercase">Prologue</span> <br> Alternative and feminist independent publishing
-                    </h3>
-                  </a></li>
-
-                <li><a href="#chapter-1">
-                    <h3><span class="uppercase">Chapter I</span> <br> Words for a nicer World <br>
-                      <span class="italic">Atalanta</span>
-                    </h3>
-                  </a></li>
-
-                <li><a href="#chapter-2">
-                    <h3><span class="uppercase">Chapter II</span> <br> Four Women sitting in a bookshop <br>
-                      <span class="italic">Luipaarpers</span>
-                    </h3>
-                  </a>
-                </li>
-
-                <li><a href="#chapter-3">
-                    <h3><span class="uppercase">Chapter III</span> <br> Dreaming of an Island <br>
-                      <span class="italic">Luipaarpers</span>
-                    </h3>
-                  </a></li>
-
-                <li><a href="#chapter-4">
-                    <h3><span class="uppercase">Chapter IV</span> <br> Scratching the Surface <br>
-                      <span class="italic">The Researcher and the Archive</span>
-                    </h3>
-                  </a></li>
-
-                <li><a href="#epilogue">
-                    <h3><span class="uppercase">Epliogue</span> <br> The End?
-                    </h3>
-                  </a></li>
-              </ul>
-            </nav>
-          </div>
-
-
-          <h2 id="intro" class="uppercase">Preface</h2>
-
-          <p>
-            This is no fairy tale. No dragon, knightly swords fight, no grandiose castles up on the hill. And yet, the 5
-            stories I am about to tell are no less epic (bear with me, there will even be a treasure hunt). They talk
-            about love, hope and anger, about the power of friendships, about the magical things that happen when people
-            unite,
-            gathered by the conviction that together, even through small gestures, they can make a change, they can make
-            their voices and the ones of others a bit louder. These stories are the ones of some of the women of the women
-            in print movement (Travis Trish definition), and their resonances in contemporary emancipatory publishing
-            practices. Continuing a long legacy of independent publishing, women understood very well during the second
-            wave of feminism that the media were a paradoxical force, that those in traditional positions of power use (…)
-            to
-            engineer and control our defining narratives (Soulellis, 2021) could also be the one that catalyzed their
-            liberation, allowing them to build communities, keep each other informed, disseminate their ideas and cultural
-            productions. Thus, these feminists created their own. <br>
-            If our protagonists are all very different characters, with very different stories, what connects them is the
-            abnegation, boundless energy, unconditional love and care they put in activities that, they firmly believe
-            (well, okay, with some surfacing doubts, despondency, and existential crises, they are still human after all),
-            can change the world in which they live for the better. Because of course, initiating a fight against a way
-            scarier and powerful beast than your typical fairytale’s dragons — the ruthless matrix of domination
-            (capitalism-colonialism-heteropatriarchy-white supremacy) (Collins, 1990) ruling our lives and societies —
-            comes
-            with its share of obstacles, disenchantments, and difficulties. A task all the more daunting for women who are
-            simultaneously confronted with intersecting axis of this matrix, who had to fight for the recognition of their
-            identities, ideas and practices even within the feminist movement, challenging and criticizing the dominant
-            conceptions of a white, secular and predominantly heterosexual feminism. (Huisman or Feminist strategies).
-            <br>
-            But even when it fails. At least they would have tried, at least they showed that we can build something else,
-            at least they are not alone anymore, at least they found something on the way. Their weapons are their words,
-            that they print to disseminate in the world, further than their voice could ever reach. Ranging from women’s
-            writing groups to printers, publishers and bookshops, diverse initiatives and organizations started
-            flourishing from the middle of the 60’s onwards and developed in a protean and complex network that operated
-            simultaneously
-            on a local and international level. A variety of approaches, organizational systems, demands and conceptions
-            of feminism were carried and tested by its participants, making the women in print movement a heterogenous and
-            organic blob of ideas and practices rather than a homogenous single-voiced block. However, those initiatives
-            converged in the desire to shape practices that strive not only to not reproduce intersecting systems of
-            oppression but to dismantle them at the same time, centering around issues of representation; protocols of
-            collective work and participative propositions; the questioning of the traditional structures of creation; the
-            highlighting of relational questions through the emphasis on distribution and sharing; the commoning of tools;
-            the blurring of boundaries between art and activism.(Furter, 2017, p.3) Many proposals that it seems urgent to
-            reactivate in a contemporary context – which unfortunately has not rid itself of the dynamics of dominance and
-            power mentioned before – and in the prospect of a future that promises to be no less rich in crises and
-            challenges. <br>
-            Yet, many of those fantastic stories stayed in the shadows, obfuscated by the same conditions that brought
-            them into being. As a woman navigating the art and design world and education, as a designer interested in
-            editorial and publishing practices, I missed them. To situate myself and find agency in a discipline where I
-            don’t feel
-            I belong to, but also to imagine how the tools of design and publishing can serve a more equal, emancipatory
-            and
-            sustainable present and future. This thesis is an attempt to shed some light on a few of them, on their
-            resonances and legacies in contemporary publishing practices, and on the people who laboriously try to stich
-            back a few pieces of this patchworked History to start constituting a more inclusive and complete book
-            Herstory. The little square I aim to bring to this patchwork will focus on the women in print movement,
-            through stories
-            that have been shared by some of its participants, by researchers and designers who also work on their little
-            squares, and finally through archival materials found in Atria and online.
-            <br>
-            I thank them all for their time, generosity, and enthusiasm (+detailed version of this incoming)
-
-          </p>
-
-
-          <h2 id="prologue">
-            <span class="uppercase">Prologue</span> <br>Alternative and Feminist Independent Publishing
-          </h2>
-
-          <p>Publish :
-            1 a: to make generally known <br>
-            b: to make public announcement of<br>
-            2 a: to disseminate to the public<br>
-            b: to produce or release for distribution (specifically: print)<br>
-            c: to issue the work of (an author)<br>
-            <br>
-            A two-fold definition for a two-fold act: publishing is both making public —rendering content, information publicly available — but also making publics — transforming, disseminating, distributing this content via processes that gather,
-            connect and create audiences .
-            The publication holds potential to foster, amplify and spread ideas, and by unfolding in the world, to inform, to influence, to criticize, to persuade, to manipulate, to make the world move. Barbara Greier, founder of Naiad Press puts
-            forward the power and political implications of the publication: “We actually influence people’s lives because we do infect their minds with what we put on the printed page. And that’s extremely important. That is really the most
-            important political tool I think there is.”
-            Traditionally, publishing is strongly associated with the printed form—with books, magazines, periodicals, pamphlets. If this relationship has been significantly challenged by the emergence of the web and new forms of publications (blogs,
-            eBooks, websites, and social networks have and continue to redefine the possibilities and potentials of publishing), the written, printed medium is still considered¬ to hold a certain authority, a proof of legitimacy prevailing over other
-            forms (oral, visual, digital) in many fields, such as academic research or literature . This hierarchization of media creates an unequal and unbalanced discipline, as the access to creation and production tools is unfairly distributed —
-            raising the question: who can publish and be published, and as importantly, who cannot?
-            <br>
-            Marijke Huisman, in her article Feministische uitgeverij Sara (1976-1987) (Feminist Publisher Sara (1976-1987)), associates the creation of independent feminist publishing networks with the realization that “information transmission was
-            not a gender-neutral process” , but rather a commercially driven, sexist one, gatekept by editors and publishers who “largely determined what was (not) published and how it was published in the pre-internet era” . This statement could be
-            generalized and expanded— information transmission is not a neutral process—and is representative of societal power dynamics, restricting its access to a privilege few, where minorities or dissident perspectives and opinion are rarely
-            represented.
-            This motivated the creation of alternative and independent publishing practices to make space for those voices, to spread ideas and information outside of state, institutional or religious control, but also outside of a restrictive
-            mainstream industry.
-            “Freedom of the press is guaranteed only to those who own one.” The History of alternative publishing is strongly connected to the one of printing technologies, a relationship greatly detailed by Alessandro Ludovico, in a chapter titled A
-            history of alternative publishing reflecting the evolution of print in his book Post-digital Print (2012) and from which most of the following examples are extracted. Ludovico traces the beginnings of alternative publishing practices back
-            to pre-Gutenberg times, with the tradition of Biblia Pauperum: these illustrated pages of the Bible containing little (generally in vernacular languages rather than Latin) to no text were printed with wood blocks (usually one per page) in
-            a form that could be compared to modern comic strips, were meant to be accessible for people who could not read. Later, the invention and spread of the movable-type printing press meant — still according to Ludovico — “the beginning of
-            self-publishing” . It allowed for larger print runs and therefore for wide-ranging distribution, which makes more difficult the destruction of full editions (in contrast with manuscripts). He gives the examples of 17th century dissident
-            groups Ranters, whose heretics pamphlets survived until today (a few copies only) despite their ban and destruction by authorities, and of the influence of self-published political pamphlet with some “underground bestsellers” preceding
-            and catalyzing both the French and American revolutions.
-            Other strategies were found when the access to wide-ranging printing technologies was not possible. The samizdat (from Russian: самиздат, lit. 'self-publishing') was a system created to escape ex-USSR censorship: individuals were
-            reproducing banned or underground publications manually (mostly hand or type written) that were passed and reproduced from (trusted) reader to (trusted) reader. A characteristic of alternative press is also the repurposing of printing
-            technologies, like the mimeograph, usually used in offices, school or church administrations , or Xerox photocopiers, initially created as an office equipment.
-            The 60’s and 70’s witnessed the flourishing of alternative and independent presses, connected both to the development of underground movements and to the increasing affordability of printing techniques such as screen printing and small
-            offset presses.
-            If the methods and contexts of those examples are varying, one thing that connects all of them is their sense of urgency: they are driven by the urgent need to express opinions, reactions, to inform, gather and organize, sometimes at
-            great risks for the persons involved in the publishing activities. Heretic views, political dissident opinion, union revendications, call for actions, minorities’ perspectives or demands that were very much anchored in the now found in
-            publishing an answer to the absolute necessity to record, recount and inform in the present.
-
-            What later became known as the women in print movement is part of this lineage. Emerging in the agitation of women's liberation, the women in print movement is a product of second-wave feminism , following its philosophy in ideas and
-            practice. In Rolling Our Own: Women as Printers, Publishers and Distributors, Eileen Cadman, Gail Chester and Agnès Pivot underline that “Feminist publishing (…) seems to epitomize most clearly the problems and choices which face
-            feminists confronted with a society which is both patriarchal and capitalistic.” With the struggle for gender equality and emancipation comes the necessity for women to create their own communication channels and simultaneously to
-            re-think organization and work, outside of a dominant and oppressive—patriarchal and capitalist— system, in the search for more sustainable, inclusive, human-scale model. Non-hierarchical structures, collaborative and collective
-            approaches of labor and creation, communing of resources, process-oriented rather that outcome-oriented ways of making, questions of representation and inclusivity, emphasize and care for the relational and the personal are some of the
-            tools and strategies put in practice in women’s publishing practices and more generally in second wave feminist initiatives. The aim was both to develop a women's culture and economy, by creating autonomous communication channels to stay
-            in touch, disseminate ideas and cultural productions related to the movement while acquiring practical skills in order to take control of production means, thus taking control of their ideas and identities and escaping the male domination
-            in the industrial sector . From the middle of the sixties on, women’s initiatives start to spawn and thrive in Europe and North-America, creating a “woman-centered network of readers and writers, editors, printers, publishers,
-            distributors, and retailers through which ideas, objects, and practices flowed in a continuous and dynamic loop.”
-            The Dutch Women in print movement very much follows this model, with a complex network quite extensively mapped by Inge Frank Van Vught in their master thesis Vlinders, kom uit je kokon! (Butterfly, come out of your cocoon!) and
-            visualized hereunder.
-          </p>
-
-          <h2 id="chapter-1">
-            <span class="uppercase">Chapter I</span> <br> Words for a nicer World <br>
-            <span class="italic">Atalanta</span>
-          </h2>
-
-          <p>
-            <span class="italic">(This text is in parts an excerpt from an interview with Weia Reinbound and Rymke Wiersma that took place on December 14th, 2022, in Utrecht, completed by external sources and references)
-            </span><br> <br>
-            Rymke and Weia met in the spring of 1980 and fell in the love the minute they saw each other. At least that is what Weia says. No, you fell in love with me! (Rymke chuckles). They stayed together ever since, partnering in life and in
-            running the still active publishing house Atalanta. Driven by the conviction that the world can be much nicer, thinking can be much deeper, they write, print, and publish their own works. They live and work in an eco-neighbourhood of
-            Utrecht, in a house with a lot of stairs (maybe we have a castle after all) that they share with a friend. On the ground floor, a spacious room that hosted their printing press for many years (the (model of press) left for new adventures
-            in South America, as it has been donated to a women's collectives a few years ago) is now the home of (model of the printer they use now), Weia’s paintings and Atalanta’s archives. All the way up the stairs, just under the roof, a room
-            bathed in light in which we sat to drink tea and talk about self-publishing, walking in the mountains, life-long friendships, being radical and feminist, but not radical feminist and the Dutch feminist movement.
-
-            At the end of 1979, Rymke, together with three other women, has the idea to create a feminist printing house. None of them know the first thing about printing, and so they ask Weia Reinboud, who worked for the feminist printer Virginia,
-            to teach them how to operate the small offset press bought with their savings and the proceeds of a cake sale. More than her expertise, she shares with the other women an enthusiasm that becomes contagious, and she joyfully joins the team
-            in 1980. Soon after, while traveling in Greece, Rymke discovers the mythological heroin Atalanta, a headstrong, swift-footed woman who was raised by a bear on Mount Parthenion and devoted herself to the goddess Artemis. It is also the
-            name of a beautiful butterfly — but all butterflies are beautiful, of course, as are all woodlice! (Weia). Atalanta finds a name, and soon after, a place. The five women settle in a squatted space at (address), which they spend more than
-            a year renovating. It was a great time. We didn’t work a lot, because there were so many discussions, so many things happening, in the movement and in our lives. (Rymke). They install their small single-color offset press in the center of
-            the room and paint it a dark-red color. Everything is finally ready. But, as I told you, it is an epic story, and before they could even get to print once, the building is sold to a private owner. Atalanta must move and two of the women,
-            soon followed by a third, leave the project for diverse personal reasons. Weia and Rymke take their small venture alone to a new place, a women’s building shared with a wood workshop and artists. In this space where men are not allowed,
-            they share not only a living area but ideals, convictions and above all friendships. There, they met their friend Tieneke (), whith whom they lived today, and collaborated with on diverse publications ().
-
-            At the end of 1982, the first projects roll off the press. Among some ephemeras for diverse feminist and lesbian initiatives, a poster containing a verse by Sappho calligraphed and translated by Weia, and a small book entitled De Egeltjes
-            written and illustrated by Rymke. I always wanted to write, and I thought that having our own feminist print shop, I could print and publish my texts too (Rymke). Being able to produce and publish autonomously their content, without the
-            influence of others, has always been and remains central in Atalanta’s practice. It is more generally a driving force of the women in print movement. Gaining autonomy at all stages of the publishing process by taking control of the
-            production means allowed them to break free of patriarchal domination and the corporate logics that underpin it, while enhancing a women’s culture and economy and to jump over the fence of a gatekept publishing industry (Huisman, 2016,
-            p.4). Many publications would not have seen the light of day otherwise, because funds were lacking to afford big print runs in mainstream printing houses, which were anyway quite reluctant to print feminist publications discussing topics
-            such as sex, women's health, abortion, lesbianism, and feminist politics. Learning the technical and practical skills was therefore essential, not only to preserve autonomy, but also to follow the second wave feminist idea that the
-            simultaneous development of women’s heads and hands was necessary to prevent a divisive split between radical theory and practice. Without a conscious blurring of the lines between manual and mental labor, feminists risked recreating
-            among themselves the hierarchies of class, intellect, power, and so forth, that they were committed to eradicating. (Travis, 2008, p.280). Just like Weia, a lot of women were already working in the trade before joining the movement, in
-            which they shared their knowledges and skills with other women who could, in turn, handle printing and production. The spread of this expertise resulted in the creation of both a revolutionary women’s culture—one that made all women
-            theorizers of gender—and a revolutionary print culture—one that undid the specialization and professionalization that had characterized printing and publishing since the early modern period. (Travis, 2008, p.281).
-
-            The desire to print for other feminist initiatives is soon hindered by the quirks of their old, unreliable machines. The print quality is inconsistent, their darkroom consists in a large curtain of black plastic that was weighted down by
-            pebbles and the press often must be operated by hand, with a crank made of copper water pipes, making commissioned work difficult and stressful. During the early times, they manage to produce several prints for women’s restaurant
-            Eucalypta, a poster, some flyers, and stickers for the lesbian festival Pottenpracht, a few posters for various women’s events, and an issue of the black feminist magazine Umoja, whose members come to help with the printing, before
-            focusing mainly on their own productions. I think we were very critical too, so we worked only with a few people (Rymke chuckles). They can then adapt their designs to the whims of the machines, spend less time repairing them, and devote
-            themselves more fully to writing, which is taking up more and more of their time. In their texts, they develop a radical and feminist thought which is completely intertwined with their anarchist, ecologist, and vegan convictions. This
-            approach makes them difficult to place in bookshops: When we went to the Women's Bookshop and showed our newest things they said “Well, that's more for the leftist Bookshop”, and when we went to the leftist bookshops they said “Well,
-            that's more for the ecological bookshop”etc. A multidimensional and multivocal feminism yet characteristic of the second feminist wave, whose endeavors for equality were informed by various contemporary social-political currents, such as
-            the leftist student movement, anti-racism, anti-fascism, socialism, or the squatters’ movement. Such multiplicity created a diverse scene, where each organization offered their own vision of feminism and connections, some echoing each
-            other while some other diverged and clashed (Nixdorff & Noorani, 2022).
-          </p>
-
-          <h2 id="chapter-2">
-            <span class="uppercase">Chapter II</span> <br> Four Women sitting in a bookshop <br>
-            <span class="italic">Luipaarpers</span>
-          </h2>
-
-
-          <p>
-            This story is based on the paper traces left by Luipaardpers in Atria’s archive. Their meeting’s minutes is
-            almost the only thing in this folder, spreading from the beginning of the year of 1986 to the end of 1987, and
-            concern the creation of a feminist publishing house …. While the publishing house may never have seen the
-            light of day (at least there is no trace of it), this story is important for two reasons. Firstly, they
-            present very concrete examples of the issues of organisation, funding, editorial line and ambitions, but also
-            illustrate the dynamic nature of the movement, which sees many initiatives being formed, deformed, merged,
-            etc.
-          </p>
-
-
-          <h2 id="chapter-3">
-            <span class="uppercase">Chapter III</span> <br> Dreaming of an Island <br>
-            <span class="italic">Pamela Pattynama</span>
-          </h2>
-
-          <p>
-            This story is based on an interview with Pamela Pattynama, an actie participant of the women in print movement
-            who was engaged in different initiatives, like the periodical LOVER, the feminist bookshop Xantippe, and
-            shortly the publisher De Bonte Was. We talked about the drive of the movement, intersectionality, radicalism,
-            love, ideals and friendships.
-          </p>
-
-
-          <h2 id="chapter-4">
-            <span class="uppercase">Chapter IV</span> <br> Scratching the Surface <br>
-            <span class="italic">The Researcher and the Archive</span>
-          </h2>
-
-          <p>
-            This story is based on a conversation I had with Inge Frank Van Vught, who wrote their book History Master
-            thesis on the women in print movement in the Netherlands, and more specifically, on Atalanta. We talked about
-            the
-            importance as well as the difficulties that come with such research.
-            It will be enriched by the work done by Tabea Nixdorff and Setareh Noorani for the room Feminist Design
-            Strategies, part of the exhibition Designing the Social at Het Nieuwe Instituut, to talk about the potentials
-            of the re-activation of feminist archive material.
-
-          </p>
-
-          <h2 id="epilogue">
-            <span class="uppercase">Epilogue</span> <br> The Ennd?
-          </h2>
-
-
-
-
-
-        </div>
-      </div>
-
-
-      <div class="map-tab">
-        <div id="feministMap"></div>
-      </div>
-
-
+<div class="grid-container">
+  
+  <div class="grid-item" id="middle-tab" onclick="toggleGrid(1)">   
+    <div class="middle-content">
+      <h1>Stories of independent feminist publishing</h1>
+      <h2>This website presents a state of research, that will probably never be final, about independent feminist publishing. Focused on the Ducth scene of second wave feminism, it strives to bridge historical and contemporary practices, local and (more) global contexts. It 
+        <span class="left-link" onclick="toggleGrid(2)">listens to their voices</span>,
+        strives to <span class="top-link" onclick="toggleGrid(5)">map their practices</span>,
+        look at <span class="bot-link" onclick="toggleGrid(3)">their production</span>,
+        and bridges all of this to <span class="right-link" onclick="toggleGrid(4)">contemporary research and publishing practices</span>.</h2>
     </div>
   </div>
 
+  <div class="grid-item" id="left-tab" onclick="toggleGrid(2)">
+<h4>Two Stories of feminist publishing</h4>
+ <div class="left-content"> 
+  <article>
+  <div class="open">I am the left content</div>
+  <div class="close">Chapter I</div>
+  <div class="close">Chapter II</div>
+  <div class="close">Chapter III</div>
+  <div class="close">Chapter IV</div>
+  </article>
+</div> 
+</div>
+
+  <div class="grid-item" id="bot-tab" onclick="toggleGrid(3)">
+<h4>Publications & printed production</h4>
+</div>
+
+  <div class="grid-item" id="right-tab" onclick="toggleGrid(4)">
+<h4>References & Resources</h4>
+</div>
+
+  <div class="grid-item" id="top-tab" onclick="toggleGrid(5)">
+<h4>Mapping Feminist Practices in the Netherlands</h4></div>
+</div>
+
+<button class="exit-button" onclick="toggleGrid(1)">X</button>
 
 
-  <!-- end webpage content -->
+   <!-- end webpage content -->
 
 
 

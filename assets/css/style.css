@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+@font-face {
+  font-family: 'Mrs-Eaves';
+  src: url('../fonts/MrsEaves/MrsEavesOT-Roman.woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Mrs-Eaves';
+  src: url('../fonts/MrsEaves/MrsEavesOT-Italic.woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Mrs-Eaves-SmallCaps';
+  src: url('../fonts/MrsEaves/MrsEavesSmallCaps.woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* VARIABLES */
+:root {
+  /* Color settings */
+  --color-background: rgba(255, 255, 255, 1);
+  --color-text: rgba(62, 13, 30, 1);
+  --color-text-link: rgba (62, 13, 30, 1);
+  --color-text-link-hover: rgba(62, 13, 30, 1);
+  --color-theme-1: rgb(244, 237, 130);
+  --color-theme-2: rgb(164, 146, 156);
+  --color-theme-3: rgba(194, 210, 163);
+  --color-theme-4: rgb(210, 191, 84);
+  --color-theme-5: rgb(109, 134, 149);
+  --color-theme-6: rgb(161, 146, 130);
+  --color-theme-7: rgb(244, 190, 160);
+    --color-theme-8: rgb(210, 210, 188);
+  /* Font settings */
+  --font-family: 'Mrs-Eaves', normal;
+  --font-family-cap: 'Mrs-Eaves-SmallCaps';
+  --font-size: 20px;
+  /* Margins settings */
+  --margin: 1rem;
+  --padding: 10px;
+}
+
+/* GENERAL STYLES */
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 3vw 1fr 3vw;
+  grid-template-columns: 3vw 1fr 3vw;
+  height: 100vh;
+
+}
+
+#top-tab{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: var(--color-theme-4);
+}
+
+#left-tab{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+   background-color: var(--color-theme-7);
+}
+
+#bot-tab{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: var(--color-theme-5);
+}
+
+#right-tab{ 
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: var(--color-theme-6);
+}
+
+#middle-tab{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: var(--color-theme-8);
+  padding:30px;
+  }
+
+.exit-button{
+  display:none;
+  position:absolute;
+  top: 0;
+  left:0;
+  z-index:200;
+}
+
+.top-link{
+  background-color: var(--color-theme-4);
+}
+
+.left-link{
+  background-color: var(--color-theme-7);
+}
+
+.bot-link{
+  background-color: var(--color-theme-5);
+}
+
+.right-link{
+  background-color: var(--color-theme-6);
+}
+
+.left-content{
+  display:none;
+}
+
+.visible{
+  display:block;
+}
+
+.hidden{
+display:none;
+}
+
+h1{
+  font-weight: normal;
+  font-size:5rem;
+  text-align:center;
+  line-height:100%;
+}
+
+h2{
+  font-weight: normal;
+  font-size:2rem;
+  text-align:center;
+  line-height:100%;
+}
+
+h4{
+  font-weight: normal;
+  font-size:1rem;
+  letter-spacing: .3rem;
+  text-align:center;
+  line-height:100%;
+}
+
+.grid-item h4{
+  margin:0px;
+  padding:auto;
+  line-height: 3vw;
+  
+}
+
+#left-tab  h4{
+  writing-mode: vertical-lr;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+#right-tab h4 {
+  writing-mode: vertical-lr;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#right-tab{
+  height:100vh;
+}
+
+
+
+.left-content{
+    writing-mode: horizontal-lr;
+    position:absolute;
+    top:3vw;
+    width:93vw;
+    height:100%;
+}
+
+.left-content article{
+    display:grid;
+    grid-template-rows: 1fr 3vw 3vw 3vw 3vw;
+}
+
+.open{
+  background-color:white;
+
+}
+
+.close{
+  background-color:var(--color-theme-7);
+
+}
