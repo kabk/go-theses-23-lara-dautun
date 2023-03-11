@@ -4,8 +4,7 @@
 
 
 body {
-
-    counter-reset: sidenote-counter;
+counter-reset: sidenote-counter;
 }
 
 

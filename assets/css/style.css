@@ -373,11 +373,6 @@ nav .chapter-6 h2{
   z-index:5;
 }
 
-.chapter .landscape{
-	width: var(--width-side-text);
-	position:absolute;
-}
-
 .chapter figcaption{
 margin:0; padding:0;
 }
@@ -486,8 +481,6 @@ margin:0; padding:0;
 }
 
 
-
-
 /* Typo */
 em{
 	font-style: italic;
@@ -515,9 +508,6 @@ blockquote{
 	width: calc(var(--width-main-text) - var(--width-indent) - 8 * var(--margin));
 
 }
-
-
-
 
 
 

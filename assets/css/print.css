@@ -12,12 +12,15 @@ html {
 
 	--font-size-XL: 7em;
 	--font-size-L: 5em;
+	--font-size-ML: 3em;
 	--font-size-M: 1em;
 	--font-size-S: 0.75em;
 	--line-height-M:1.15em;
 	--line-height-S:0.9em;
 
 	--padding-def:10mm;
+	--margin:0.5rem;
+	
 
 }
 
@@ -66,6 +69,7 @@ p + p {
 	padding-bottom: var(--line-height-M);
 }
 
+
 /* Specific Styles */
 
 em{
@@ -88,6 +92,7 @@ blockquote p{
 	width: calc(var(--width-main-text) - var(--width-indent));
 
 }
+
 
 
 /* ------------ Sidenotes ------------ */
@@ -120,15 +125,93 @@ blockquote p{
 	top:calc(var(--line-height-S) * 36.25);
 }
 
+.sidenote-first-02{
+	top:calc(var(--line-height-S) * 35);
+}
+
 body { counter-reset: appelnote sidenote; }
 
 .appelnote { counter-increment: appelnote; }
 .appelnote:before { content: counter(appelnote); }
 
 .sidenote { counter-increment: sidenote; }
-.sidenote:before { content: counter(sidenote) ". "; }
+.sidenote:before { content: counter(sidenote) "	"; }
+
+body { counter-reset: appelCaption textCaption; }
+
+.appelCaption { counter-increment: imgCaption; }
+.appelCaption:before { content: counter(imgCaption)}
+
+.textCaption { counter-increment: textCaption; }
+.textCaption:before { content: counter(textCaption) }
 
 
+/* ------------ Images ------------ */
+
+figure{
+	width: calc(var(--width-side-text) - var(--margin));
+	display:inline-grid;
+	vertical-align: top; 
+	margin:0; padding:0; 
+	margin-right:calc(var(--margin) * 4);
+	padding-top:calc(var(--margin) * 2);
+	padding-bottom:calc(var(--margin) * 2);
+}
+
+img{
+	width: calc(var(--width-side-text) - var(--margin));
+	font-weight: normal;
+	border: thin solid black;
+}
+
+figcaption{
+	width:calc(var(--width-side-text) - var(--margin));
+	font-size: var(--font-size-S);
+}
+
+figcaption p{
+	width: calc(var(--width-side-text) - var(--margin));
+	padding-top:var(--margin);
+}
+
+.landscape img{
+	width: var(--width-main-text);
+}
+
+.landscape figcaption p{
+	width: var(--width-main-text);
+}
+
+/* ------------ Title Page ------------ */
+.title-page p{
+	position:absolute;
+	bottom:0;
+}
+
+/* ------------ Glossary ------------ */
+
+.definition h2{
+	font-family: 'chaumont';
+	font-size:var(--font-size-ML);
+	padding:0;margin:0;
+}
+
+.definition p{
+	padding-top: calc(var(--margin) * 1);
+	padding-bottom: calc(var(--margin) * 3);
+}
+
+/* ------------ References ------------ */
+
+.references p{
+	font-size:var(--font-size-S);
+}
+
+.references a{
+	color:black;
+    text-decoration:none;
+
+}
 
 /* ------------ Paged.js Elements ------------ */
 
@@ -138,16 +221,6 @@ body { counter-reset: appelnote sidenote; }
 	line-height: 1.1em;
 	font-size: 1em;
 	font-family: 'CenturySchL';
-}
-
-
-
-img{
-	width: var(--width-side-text);
-	position:absolute;
-	right:0; 
-	font-weight: normal;
-	border: thin solid black;
 }
 
 
@@ -163,7 +236,6 @@ img{
 		@bottom-right{
 			content: counter(page);
 		  }	
-		
 	} 
 
 
@@ -198,6 +270,11 @@ img{
 		font-size: 2em;
 		padding-bottom: 5mm;
 	  } 
+
+	  #list-toc-generated{
+		position:absolute;
+		bottom:0;
+	  }
 	
 	.toc-element:nth-of-type(6) {
 		padding-top:20mm;
@@ -207,10 +284,18 @@ img{
 		padding-top:20mm;
 	  }
 
+	  span.sidenote:before{
+		margin-right: 2em;
+	  }
 	  
 	.chapter{
 		break-before: page;
 	}
 
+	p{
+		widows: 3;
+		orphans:3;
+		border:solid white thin;
+	}
   }
 
