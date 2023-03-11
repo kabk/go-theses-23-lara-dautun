@@ -316,6 +316,7 @@ nav .chapter-6 h2{
 
 .block-content> div{
   overflow-y:scroll;
+  overflow-x: hidden;
 }
 
 .block-thesis h2, .block-publi h2, .block-map h2, .block-gloss h2{

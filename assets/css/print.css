@@ -167,6 +167,7 @@ img{
 figcaption{
 	width:calc(var(--width-side-text) - var(--margin));
 	font-size: var(--font-size-S);
+	background-color:white;
 }
 
 figcaption p{
