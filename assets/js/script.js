@@ -63,6 +63,11 @@ $(document).ready(function () {
 
       if (isMobile == true) {
         contentMap.classList.toggle("map-open");
+        
+        if (contentPubli.classList.contains("publi-open")){
+          console.log('publi is open');
+          contentMap.style.zIndex = "100"; 
+        }
       } 
       
       else {
@@ -78,8 +83,9 @@ $(document).ready(function () {
       contentLanding.classList.toggle("landing-close");
 
       if (contentPubli.classList.contains("publi-open")){
-
+        console.log('contains publi open')
        if (isMobile == true) {
+        console.log('and mobile is true')
           contentMap.style.zIndex = "100"; 
         } 
 
@@ -105,7 +111,6 @@ $(document).ready(function () {
       contentPubli.classList.toggle("publi-open");
 
       if (contentPubli.classList.contains("publi-open-half")) {
-        console.log('yo yo');
         contentPubli.classList.toggle("publi-open-half");
         contentGloss.classList.remove("gloss-open-half");
         contentGloss.classList.toggle("gloss-open");
@@ -237,6 +242,7 @@ $(document).ready(function () {
   
       }
       });
+
   
   
         //------------- IMAGE ANGLE THESIS ------------------
@@ -295,16 +301,30 @@ $(document).ready(function () {
   });
     });
   
+      
+    $(window).on("load", function(){
   
+      images.forEach((image) => {
 
-  
+   const randomRotation = Math.floor(Math.random() * (maxRotation - minRotation + 1) + minRotation);
+     const randomMargin = Math.floor(Math.random() * (maxMargin - minMargin + 1) + minMargin);
+   
+   
+     if (isMobile == false) {
+       console.log('is mobile was false');
+       image.style.marginRight = `${randomMargin}vw`;
+       image.style.transform = `rotate(${randomRotation}deg)`;
 
-  
+     } else {
 
-  
+       console.log('is mobile was true');
+     image.style.marginRight = '0px';
+       image.style.transform = 'rotate(0deg)';
+     }
+   
 
-  
-
+ });
+   });
   
 
 });

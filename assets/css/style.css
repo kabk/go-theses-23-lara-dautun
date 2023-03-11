@@ -819,7 +819,7 @@ p{
   margin-top: calc(var(--margin) * 4);
  }
  .chapter figure{
-	width: var(--width-side-text);
+	width: calc(var(--width-side-text) * 2);
 	position:relative;
   display: inline-grid;
    vertical-align: top; 
@@ -828,12 +828,12 @@ p{
 }
 
 .chapter img{
-	width: var(--width-side-text);
+	width: calc(var(--width-side-text) * 2);
 	position:relative;
 }
 
 .chapter figcaption p{
-  width: var(--width-side-text);
+  width: calc(var(--width-side-text) * 2);
   border:none;
 } 
 
