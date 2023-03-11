@@ -1,95 +1,1684 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-   <!-- meta tags, fill them with website meta infos -->
-   <meta name="description" content="Description of your web page" />
-   <meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..." />
-   <meta name="author" content="Name of the author/owner of the webpage's content" />
+<!-- meta tags, fill them with website meta infos -->
+<meta name="description" content="Description of your web page" /> 
+<meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..."/> 
+<meta name="author" content="Name of the author/owner of the webpage's content" />
 
-   <!-- favicons -->
-   <!--
-	very minimal use of favicon with a 512x512px .png favicon,
-	use 'https://www.favicon-generator.org' to generate a more extensive favicon code
+<!-- favicons -->
+<!--
+	very minimal use of favicon with a 512x512px .png favicon, 
+	use 'https://www.favicon-generator.org' to generate a more extensive favicon code 
 -->
-   <link rel="icon" href="assets/images/favicon/favicon.png" sizes="32x32" />
-   <link rel="icon" href="assets/images/favicon/favicon.png" sizes="192x192" />
+<link rel="icon" href="assets/images/favicon/favicon.png" sizes="32x32" />
+<link rel="icon" href="assets/images/favicon/favicon.png" sizes="192x192" />
 
-   <!-- meta properties for social medias, twitter = twitter, og:... = facebook -->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="Webpage title">
-   <meta name="twitter:description" content="Description of your web page">
-   <meta property="twitter:image:src" content="assets/images/imageforsocialmedias.jpg">
-   <meta property="og:title" content="Webpage title" />
-   <meta property="og:url" content="http://www.mywebsite.com/mywebpage" />
-   <meta property="og:description" content="Description of your webpage" />
-   <meta property="og:image" content="assets/images/imageforsocialmedias.jpg" />
+<!-- meta properties for social medias, twitter = twitter, og:... = facebook -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Webpage title">
+<meta name="twitter:description" content="Description of your web page">
+<meta property="twitter:image:src" content="assets/images/imageforsocialmedias.jpg">
+<meta property="og:title" content="Webpage title" />
+<meta property="og:url" content="http://www.mywebsite.com/mywebpage" />
+<meta property="og:description" content="Description of your webpage" />
+<meta property="og:image" content="assets/images/imageforsocialmedias.jpg" />
 
+<!-- website title, visible in the browser window and on link sharing -->
+<title>Website title</title>
 
-   <!-- website title, visible in the browser window and on link sharing -->
-   <title>Lara's Thesis Wouhooou</title>
+<!-- links for extensions and dependencies -->
 
-   <!-- links for extensions and dependencies -->
+<!-- css -->
+<!-- normalize 'resets' some browser properties to make them look the same across browsers -->
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css?ver=1.0">
+<link rel="stylesheet" href="assets/css/tufte.css">
 
-   <!-- css -->
-   <!-- normalize 'resets' some browser properties to make them look the same across browsers -->
-   <link rel="stylesheet" href="assets/css/normalize.css">
-   <link rel="stylesheet" href="assets/css/style.css">
+<!-- js -->
+<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
 
-   <!-- js -->
-   <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
-   <script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
-
+    
 </head>
 
 <body>
-   <!-- webpage content goes here -->
 
-<div class="grid-container">
+
+
+	<!-- webpage content goes here -->
+
+
+
+	<div class="page-wrapper">
+
+	<div class="grid-item block-thesis"> <h2>Two Stories of Feminist Publishing <btn id="btn-thesis-open">↓</btn> <btn class="hidden" id="btn-thesis-close">✕</btn></h2></div>
+	<div class="grid-item block-publi"><h2>Publications <btn id="btn-publi-open">↓</btn> <btn class="hidden" id="btn-publi-close">✕</btn></h2></div>
+	<div class="grid-item block-content">
+
+		<div class="content-landing landing-open"> 
+			<h3>This website presents a state of research, that will probably never be final, about independent feminist publishing in the Netherlands during Second-wave feminism. It gathers a <span id="back-1">few voices of women involved in the movement</span>, regroup some of <span id="back-2">their productions</span>, and strives to <span id="back-3">map their practices.</span></h3>
+			<h3>You can print the content of this website <a href="print.html">here</a>.</h3>
+		</div>
+
+		<div class="content-thesis thesis-closed">
+			<nav>
+			<div class="block-nav desktop"><h2>Table of Contents <btn id="btn-nav-open">↓</btn> <btn class="hidden" id="btn-nav-close">✕</btn></h2></div>
+				
+			<ul class ="content-nav nav-closed">
+					<li class="chapter-1">Introduction</li>
+					<li class="chapter-2">Pamela Pattynama</li>
+					<li class="chapter-3">Atalanta</li>
+					<li class="chapter-4">The Researcher, the Designer & the Archive</li>
+					<li class="chapter-5">Conclusion</li>
+					<li class="chapter-6"><h2>References</h2></li>
+				</ul>
+			</nav>
+
+			<div class="chapter" id="chapter-1">
+			<div class="title chapter-1"><h1>Introduction -</h1> <h2>Independent Feminist Publishing</h2></div>
+			<p>This is no fairy tale. No dragons, knightly sword fights or grandiose
+				castles up on the hill. And yet, the stories I am about to tell you are
+				no less epic. They talk about love, hope and anger, the power of
+				friendships, and the marvellous things that happen when people unite,
+				gathered by the conviction that together, even through small gestures,
+				they can make a change, they can make their voices and other’s a bit
+				louder. They are the stories of some participants of the <em>Women in
+				Print Movement</em>, told through their voices, and the traces they left
+				in archives.</p>
+
+				<blockquote>
+					<p>“A product of <u>Second Wave feminism</u>, the Women in Print
+					Movement was an attempt by a group of allied practitioners to create an
+					alternative communications circuit—a woman-centered network of readers
+					and writers, editors, printers, publishers, distributors, and retailers
+					through which ideas, objects, and practices flowed in a continuous and
+					dynamic loop. The movement’s largest goals were nothing short of
+					revolutionary: it aimed to capture women’s experiences and insights in
+					durable—even beautiful—printed forms through a communications network
+					free from patriarchal and capitalist control. By doing so, participants
+					believed they would not only create a space of freedom for women, but
+					would also and ultimately change the dominant world outside that space.”
+				<sub>(Travis, 2008, p.276)</sub></p>
+					</blockquote>
+					 
+					
+					 <p>I told you it was going to be epic. But before jumping into our
+						stories, let’s take a few steps back, and consider how such a
+						revolutionary movement came into being.</p>
+
+						<p>Publishing is a political force. &#8239;<label class="sidenote-number"></label> <span class="sidenote">Barbara Greier, founder of Naiad Press puts forward the
+							power and political implications of the publication: “We actually
+							influence people’s lives because we do infect their minds with what we
+							put on the printed page. And that’s extremely important. That is really
+							the most important political tool I think there is.” (Young, 1997, as
+							cited in Huisman, 2016)</span>
+						The publication holds potentials to foster, amplify and spread ideas, and by unfolding in the
+						world, to inform, influence, criticise, persuade, manipulate.
+						Conversely, it holds the power to exclude, erase and marginalise.
+						Historically associated with the printed form, its accessibility is thus
+						connected to the one of tools for production and diffusion:
+						“Freedom of the press is guaranteed only to those who own
+						one” <sub>(attributed to Liebling, 1990 as cited Dżułaj, 2020, sec.
+						Cases: Provo and Raddraier)</sub>. Those who own one, are also often “those in
+						traditional positions of power [who] use those tools to engineer and
+						control our defining narratives” <sub>(Soulellis, 2021a, sec. Intro)</sub>, a
+						privileged few who hold a monopoly, serving dominant discourses and
+						maintaining power dynamics, determining—in a pre-internet era—what was
+						(and maybe more importantly what was not) published, excluding
+						minorities and dissident perspectives <sub>(Huisman, 2016, p.4)</sub>. This
+						motivated the creation of alternative and independent publishing
+						practices, to spread ideas and information outside of state,
+						institutional or religious control, but also outside of a restrictive
+						mainstream industry. A mode of publishing characterised by its sense of
+						urgency; responding to the absolute necessity to record, recount and
+						inform in the present <sub>(Soulellis, 2021a, sec. Intro)</sub>.</p> 
+						<p>Alternative presses have played a significant role in major
+						historical events like the French and American revolutions, or the
+						clandestine communication networks of former communist countries, by
+						facilitating the dissemination of influential ideas and information
+						through self-publishing. Take Thomas Paine’s anonymously published
+						pamphlet, <em>Common Sense</em>, an “underground bestseller” <sub>(Ludovico,
+						2012, pp.32)</sub> with hundreds of thousands of copies put in circulation
+						which provided the intellectual spark that ignited the uprising during
+						the American Revolution.</p> 
+						<p>The history of alternative presses in intimately tied with the one of
+						the evolution technologies, a relationship remarkably detailed in
+						Alessandro Ludovico’s book <em>Post-digital Print</em>, particularly in
+						a chapter titled <em>A history of alternative publishing reflecting the
+						evolution of print</em>, from which the following examples are
+						extracted. To overcome the lack of means and access to mass production
+						tools, alternative presses proved to be masters of diversion and
+						repurposing, from the utilization wood-block printing in pre-Gutenberg
+						times (<u>Biblia Pauperum</u>), to the use of manual reproduction
+						techniques (such as the typewriter or small hand presses, see
+						<u>samizdat</u>), or of tools initially intended for offices or
+						administrations (such as the <u>mimeograph</u>,
+						or later on Xerox photocopiers and <u>Risograph</u> printers). Alternative presses reached
+						a peak in the 1960s, with the surge of various underground movements
+						paralleled by the increasing affordability of printing techniques such
+						as screen printing or small offset presses <sub>(Furter, 2017, p.22)</sub>.</p>
+						<p>Now, let’s get back to our stories. What later became known as the
+						<em>Women in Print Movement</em> forms part of this lineage. Being a
+						group marginalised by traditional publishing, women had to come up with
+						a variety of strategies to jump over the fences of this gatekept
+						industry. Many women writers have, for instance, used male or
+						gender-neutral pen names to overcome gender-based discrimination and
+						biases prevailing in the literary world, to have their work taken more
+						seriously and published.
+						&#8239;<label class="sidenote-number"></label> <span class="sidenote">Publishing under a male or gender-neutral name allowed
+							these women writers to be judged solely on the quality of their writing,
+							rather than being discriminated against based on their gender.
+							Particularly common in the 19th century, it also allowed them to write
+							about topics that were then considered inappropriate for women, such as
+							politics, sexuality, and social issues. A few famous examples are the
+							Bronte sisters/Currer, Ellis, and Acton Bell, Amantine Lucile Aurore
+							Dupin/George Sand, Mary Ann Evans/George Eliott, Louisa May Alcott/A.M.
+							Barnard, Violet Paget/Veron Lee, Alice Mary Norton/Andre Norton, Karen
+							Blixen/ Isak Dinesen, Alice Sheldon/James Tiptree Jr, or more recently
+							Meg Howrey and Christina Lynch/Magnus Flyte. Penguin publisher issued in
+							2020 a collection called ‘Reclaim Her Name’, gathering texts from
+							influential pen-named women in literature. </span>
+
+						A stratagem that has proven to be
+						effective, but which circumvent the gate more than it strives to
+						dismantle it. For that, it will take the strong currents of second wave
+						feminism, pushing women to create their own communications channels. At
+						the end of the 1960’s women’s periodicals, printers, publishing houses
+						and bookstores flourished. Women took control of the production and
+						distribution means, gaining autonomy at each step of the publishing
+						process, from the production of content to its distribution. It allowed
+						them to disseminate independently information and cultural productions
+						related to the women’s movement, while re-imagining relations,
+						organization, and work outside of a patriarchal and capitalist
+						framework,&#8239;<label class="sidenote-number"></label> <span class="sidenote">In <em>Rolling Our Own: Women as Printers, Publishers
+							and Distributors,</em> Eileen Cadman, Gail Chester and Agnès Pivot
+							underline how “Feminist publishing, more than any other aspect of the
+							book production process, seems to epitomise most clearly the problems
+							and choices which face feminists confronted with a society which is both
+							patriarchal and capitalistic, in order to go about the business of
+							disseminating feminist ideas.” (Cadman et al., 1981 as cited in Jolly,
+							2020)</span>
+						 in pursuit of a more inclusive and
+						sustainable model <sub>(Travis, 2008, p.278)</sub>. A variety of approaches,
+						organizational systems, demands and conceptions of feminism were carried
+						and tested by its participants, making the movement a heterogenous and
+						organic blob of ideas and practices rather than a homogenous
+						single-voiced block <sub>(van Vught, 2020, p.30)</sub>.</p>
+						<p>But if our protagonists are all very different characters, with very
+							different stories, what connects them is the abnegation, boundless
+							energy, unconditional love and care they put in activities that, they
+							firmly believed (well, okay, with some surfacing doubts, despondency,
+							and existential crises, they are still human after all), could change
+							the world in which they live for the better. And even had they failed;
+							at least they would have tried, at least they would have showed that
+							something else is possible, at least they would not have been alone
+							anymore, at least they would have found something on the way. Because
+							initiating a fight against a way scarier and powerful beast than your
+							typical fairy tale’s dragons—the ruthless <em><u>matrix of
+							domination</u></em> (capitalism-colonialism-heteropatriarchy-white
+							supremacy)<sub>(Collins, 1990)</sub> —comes with its share of obstacles,
+							disenchantments, and difficulties. A task all the more daunting for
+							women who were simultaneously confronted with <u>intersecting</u>
+							<sub>(Crenshaw, 1989, pp.57–80)</sub> axes of this matrix, and who had to fight for
+							the recognition of their identities, ideas, and practices even within
+							the feminist movement <sub>(Huisman, 2016, p.3)</sub>.</p>
+							<p>And yet, many of those remarkable stories remained in the shadows,
+							obscured by the same conditions that brought them into being. If they
+							have been the subject of a growing interest for the past few years, they
+							are still widely under-studied and under-narrated <sub>(Travis, 2008; Van
+							Vught, 2020)</sub>, a precious legacy sleeping in a few people’s memories and
+							archival boxes. Some never even made it there: “the matrix of domination
+							produces particular burdens and privileges that determine who gets to
+							succeed. As well as who doesn’t—who isn’t included, who isn’t collected
+							in the archive, who is not written into history” <sub>(Soulellis, 2021b)</sub>.
+							What is made available in archives is a selection, a sample usually not
+							representative of the full scope of movements and stories, but rather of
+							the dynamics of domination shaping histor(y)ies.&#8239;<label class="sidenote-number"></label> <span class="sidenote">What is made available in archives is a selection, a
+								sample usually not representative of the full scope of movements and
+								history. In this respect, there are two key parameters to consider.
+								First, Feminist and social archives rely mostly on personal donations.
+								For the <em>Women in Print Movement</em>, the collections often consist
+								of personal archives donated by individuals and organizations who
+								participated in the movement. A wide range of reasons may lead
+								participants to keep their archives, such as the emotional or personal
+								aspect of its content. The good preservation of the material is another
+								factor, since a large part of the production consisted of ephemera
+								(printed materials of ephemeral nature, such as newsletters, journals,
+								or pamphlets) which were particularly fragile as they had an
+								instantaneous vocation, the question of their archiving coming decades
+								later. Second, archives are institutions with collection policies,
+								including specific selection criteria regarding what get in and what
+								does not. These policies are sometimes explicit, but often opaque, as it
+								is the case for many online archives. As Paul Soulellis’ quote suggests,
+								these policies often reproduce (even unconsciously) intersecting
+								dynamics of domination represented in Patricia Collins’ <em>matrix of
+								domination</em> (1990). The question of what is missing is
+								still partly unanswered, and hopefully future research and donations
+								will enable a more accurate and complete picture of the movement.</span></p>
+							<p>As a woman navigating the art and design world and education, as a
+							designer interested in editorial and publishing practices, these stories
+							greatly helped me to situate myself and find agency in a discipline
+							where I don’t feel I belong, but also to imagine how the tools of design
+							and publishing can serve more equal, emancipatory, and sustainable
+							prospects. They feel urgent to recount and reactivate in a contemporary
+							context­—which unfortunately has not rid itself of the dynamics of
+							dominance mentioned before—and in the outlook of a future that promises
+							to be no less rich in crises and challenges.</p>
+							<p>To ensure that these stories are not lost to future researchers,
+							designers, book lovers, this is an attempt to shed some light on a few
+							of them and on the people who laboriously try to stich back a few pieces
+							of this patchworked History to start constituting a more inclusive
+							<u>book Herstory</u>. The little square I aim to bring to this patchwork
+							will focus on the <em>Women in Print Movement</em> in the Netherlands, &#8239;<label class="sidenote-number"></label> <span class="sidenote">The choice to focus on the Dutch scene is mainly
+								practical; to have access to primary sources, to be able to contact and
+								exchange with people who were involved in the <em>Women in Print
+								Movement</em>, but also and to restrict the scope of this research,
+								since time and word count were limited.</span> through stories that have been
+							shared by some of its participants, and the endeavours of researchers
+							and designers who also work on their little squares.</p>
+							<p>I thank them all for their time, generosity, and enthusiasm. Rymke
+							Wiersma, Weia Reinboud, and Pamela Pattynama, for sharing their stories,
+							intimately connected to the ones of their lives, with all the emotional
+							aspects, tears, laughs and hopes that are part of it. Loraine Furter,
+							for being such an inspiring designer and researcher, who warmly and
+							caringly shared many resources, ideas, encouragements, and long
+							conversations with me. Inge Frank van Vught, for their fantastic
+							research on Atalanta and the <em>Women in Print Movement</em> in the
+							Netherlands <sub>(Van Vught, 2020)</sub> without which this thesis could not
+							exist, and to have discussed openly and at length the doubts,
+							difficulties, joys that comes with such a work. Susana Caravalho, for
+							her great reading list and feedback, which, for the first time in my
+							studies, proposed a different vision of design and introduced its
+							potentials for empowerment and change. The archivists at Atria&#8239;<label class="sidenote-number"></label> <span class="sidenote">Atria, institute on gender equality and women’s history,
+								Amsterdam, is a public documentation center dedicated to women’s
+								history. It was created in 2935 and was previously International
+								Information Centre and Archive for the Women’s Movement (IIAV)
+								(1988-2009) and Aletta, Institute for Women’s History (2009-2013).
+								(<em>Atria, Instituut Voor Emancipatie, Vrouwengeschiedenis En
+								Gendergelijkheid</em>, n.d.)</span> and IHLIA&#8239;<label class="sidenote-number"></label> <span class="sidenote">IHLIA LGBTI Heritage, is an independent organization
+									located in the building OBA Oosterdok in Amsterdam. The archive focuses
+									on LGBTI-related themes, “with regard to the lives of individuals and
+									the LGBTI community in order to contribute to a balanced image of the
+									entire society and to social well-being”. (<em>IHLIA – LGBTI
+									Heritage</em>, n.d.)</span> for
+							caring about, maintaining the state of, and rendering accessible all the
+							precious archival material that made this thesis possible.</p>
+							
+						
+			</div>
+
+			<div class="chapter" id="chapter-2">
+				<div class="title chapter-2"><h1>Pamela Pattynamma —</h1> <h2>Dreaming of an Island</h2></div>
+
+				<p> This chapter is in parts an excerpt from an interview
+					with Pamela Pattynama, that took place on January 17<sup>th</sup>, 2023,
+					in Amsterdam, all the parts in italics are her words. They are completed
+					by external sources and references. <br><br></p>
+
+					<figure> <img  src="/assets/images/thesis/Publi-Sara-Lesbisch.jpg"> <figcaption><p><em>Lesbich Prachtboek</em>, Maaike Meijer ... [et al.], Sara, 1979 - 365 p., IHLIA LGBTI Heritage collections</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/Publi-Lover-79-1.jpg"> <figcaption><p><em>Lover 1979-3,</em> IHLIA LGBTI Heritage collection</p></figcaption></figure>
+					
+
+				<p>Pamela Pattynama lives in a house with a lot of stairs, and a lot of
+					books. She showed me a few of them; the ones she, and her friends, made
+					during the seventies and eighties. She smiles softly as her fingers
+					flick the pages, and her face lightens up when she talks about them.
+					<em>It was very exciting times; I am happy to have participated in
+					that.</em> She was part of the publishing house De Bonte Was for a short
+					period, participated in the creation of the feminist bookshop Xantippe
+					in Amsterdam, worked as an editor for the magazine Lover for several
+					years, and, it seems, hung out for long hours at café Saarein. We talked
+					about the power of writing, friendships, community-making, and a dreamt
+					island where women could re-imagine their world.</p>
+					<p>Writing had always been a part of Pamela’s life, long before any of
+					this began. Through her words, she clarifies her thoughts, finds
+					herself, finds her place in the world. <em>Writing is political, but
+					it’s also very personal and emotional. It has always been my way to be
+					active.</em> To write is to not be alone anymore, to recognise oneself
+					and others, in all that connects and differentiates us. Writing, sharing
+					experiences becomes a way to build common grounds and to understand the
+					multi-faceted nature of women’s lives. <em>For me, and for other women
+					generally, I think writing allows you to be more self-confident, you get
+					a better self-esteem and gain insight into the roles people play, the
+					ones women play towards and against each other.</em> But finding the
+					time, support, space, and agency to write constitutes a first and major
+					obstacle for women to publish and spread their words. Not everyone has
+					“money and a room of their own;&#8239;<label class="sidenote-number"></label> <span class="sidenote">In <em>A Room of One’s Own,</em> an essay derived from
+						two lectures Woolf gave in 1928 at Newnham and Girton College (both
+						women’s colleges at the University of Cambridge), she addresses the
+						condition of women—more particularly of women artists — whose creativity
+						and free expression have been repressed by centuries of financial and
+						educational prejudice; as illustrates her now famous sentence: “a woman
+						must have money and a room of her own if she is to write fiction.”
+						(Woolf, 1935, p.5)</span>
+					Gloria Anzaldúa, in <em>Speaking in Tongues: A Letter to Third World
+					Women Writer</em>, calls on the “mujeres de color, companions in
+					writing” <sub>(Anzaldúa, 1983, p.165)</sub> to not wait for it
+					to start writing:</p>
+					<blockquote>
+					<p>“Forget the room of one’s own­—write in the kitchen, lock yourself up
+					in the bathroom. Write on the bus or the welfare line, on the job or
+					during meals, between sleeping or waking. I write while sitting on the
+					john. No long stretches at the typewriter unless you’re wealthy or have
+					a patron—you may not even own a typewriter. While you wash the floor or
+					clothes listen to the words chanting in your body. When you’re
+					depressed, angry, hurt, when compassion and love possess you. When you
+					cannot help but write.”&#8239;<label class="sidenote-number"></label> <span class="sidenote">(Anzaldúa, 1983, p.170) This beautiful
+						quotation was shared by Loraine Furter, who came across it during her
+						own research.</span></p> 
+					</blockquote>
+					<p>A sense of urgency which led some women to unite their forces to push
+					the walls and create their room of one’s own themselves.&#8239;<label class="sidenote-number"></label> <span class="sidenote">Collectivity—making together—was crucial in the women in
+						print movement, including in the production of content. Various books,
+						pamphlets, newspapers and articles were written collectively, sometimes
+						under a unique signature. In the series of books published by De Bonte
+						Was—even if based on individual experiences—the texts are written using
+						the plural “we”, emphasizing the commonalities in women’s struggle. It
+						also allowed women with varying writing experience to work together and
+						strengthen each other’s individual voices. In an advertisement issued in
+						various feminist periodicals, the Groningen literary magazine Belletrien
+						(published by VIDA), encourages women to start writing “Women have
+						always written. Women write. Women will continue to write. Pick up the
+						pen.” Another striking instance of collective writing is the series of
+						“lesbian pulp novels” titled <em>Wilden Rosen</em>, written together by
+						the four women of the Groningen based Damesschrijfbrigade Dorcas in
+						1979.
+						(Van Vught, 2020, pp.42-43; [Advertisement for Belletrien, magazine
+						of literature], n.d)</span>
+					This need to write inspired a group of eight feminists to create, under
+					the impetus of Anneke van Baalen, Annemarie Behrens, Akke van der Meer
+					and Greet Vooren <sub>(Ekelschot, 2005, sec. De Bonte Was)</sub> the
+					publishing house De Bonte Was, at the end of the 1970’s. <em>Actually,
+					no, in the beginning [of the 1970’s]. I am really bad with dates
+					(laughs)</em>. They settled in the attic of the Amsterdam Vrouwenhuis,
+					where they invited others to write about their experiences as
+					housewives, mothers, lovers, women. A series of five small books emerged
+					from this experiment. Short texts, deliberately written in a clear and
+					understandable way, in which women were encouraged to express themselves
+					openly.</p>
+					<blockquote>
+					<p>“That was liberating for them, but also for the readers. The books
+					were a huge success. This was evident from the sales, but also from the
+					hundreds of registrations for the discussion weekends to which we
+					invited the readers. Women came from all over the country to talk about
+					the content of the books and their own lives, and thus break through the
+					suffocation of isolation and self-hatred.”&#8239;<label class="sidenote-number"></label> <span class="sidenote">The weekends were held on March 15th and 16th and April
+						19th and 20th, 1975. Translation mine. (Ekelschot, 2005, sec. De Bonte
+						Was)</span></p>
+					</blockquote>
+					<p>What they represented, their mere existence, was radical and new.
+					<em>At that time, it felt urgent for women to speak out and talk from a
+					personal level. It was not only political in a general way, but it was
+					also very individual, private as well. (…) Before that, women as a
+					collective, it didn’t exist, we were isolated from each other’s. So, it
+					was radical at the time to talk about our experiences, and from there
+					imagine all sort of actions and initiatives. We had women’s weekends,
+					which soon became lesbian weekends. That was radical too, because
+					lesbians didn’t have any kind of collective group or joined action
+					either.</em></p>
+                    <figure> <img  src="/assets/images/thesis/Publi-DBW-Moeder.jpg"> <figcaption><p>Announcement of the publication <em> Moederboek</em> by Feministiese uitgeverij de Bonte Was, 1976, Atria, A417 [poster]</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/Print-06.jpg"> <figcaption><p>Advertisement for women’s bookshop Xantippe at Westerstraat 193 in Amsterdam, Crezee, M., Atria, A404 [poster]</p></figcaption></figure>
+													
+					<p>In publishing, feminists gradually took control of the means of
+					production and distribution, creating autonomous and semi-autonomous
+					networks <sub>(Huisman, 2016).</sub> In 1975, Pamela, with four other
+					women (Annemarie Behrens, Carla Brünott, Cris van der Hoek, and Sjuul
+					Tegelaar) founded Xantippe, the second women’s bookshop in the
+					Netherlands <sub>(<em>Archief Xantippe Vrouwenboekwinkel 1975-1997</em>
+					[Geschiedenis], n.d.)</sub>. Their aim was to promote radical feminism
+					through the diffusion of books and magazines; <em>we couldn’t find any
+					collection of women’s books. There were, of course, women authors, but
+					they were scrambled between a lot of male authors. And there were no
+					feminist books in the traditional bookshops. So, we made our own!</em>
+					In June 1976, after many discussions regarding the selection of books
+					Xantippe would offer, the bookshop finally opened its doors at its first
+					address: Westerstraat 193, Amsterdam. They sold their own books, like
+					Sjuul, who distributed her absurdist, photocopied, <em>very funny
+					booklets, with all sorts of drawings</em>, but also publications from
+					other feminist initiatives, as well as international literature. Some of
+					them were produced within the feminist circles, others using the
+					mainstream production and diffusion networks. <em>There were a lot of
+					discussions about how to be as autonomous as we could, and at the same
+					time, how can we make use of them</em> [the mainstream production and
+					publication networks]<em>? There were feminist printers and publishers,
+					but a lot of the books were made in conventional, capitalist publishing
+					houses. The international books for instance came mainly via the
+					traditional channels.</em> This mixed approach would evolve through
+					time, with the movement gaining momentum and demand increasing. “The
+					first two books [published by De Bonte Was] were typed and mimeographed.
+					Later, we reprinted and produced the books with an offset printer. From
+					1977 we also outsourced the typesetting, and a few years later the
+					distribution.” <sub>(Ekelschot, 2005, sec. De Bonte Was, Translation
+					mine)</sub></p>
+					<p>Xantippe was run by a small collective of volunteers, and each person
+					worked one day a week<em>. I did the Tuesday. Sometimes, the bookshop
+					was closed because no one was there to open, ‘Yeah, sorry, I drank too
+					much last night’. Some of us were very strict and some of us way less
+					(laughs).</em> Money quickly became one of the central topics of
+					discussion. <em>Some women wanted to be paid. And some were radically
+					against payments, because that made you a capitalist.</em> These
+					discussions were not confined to the bookshop, and were shared in many
+					other initiatives. The absence of commercial interests allowed for a
+					certain freedom, as each decision could be made for ideological rather
+					than economic reasons. “We worked at De Bonte Was voluntarily, in order
+					to have the freedom to publish what we wanted and not what the market
+					was waiting for. A pleasant consequence of this was that the books were
+					cheap, so women who had less money could buy them too” <sub>(Ekelschot,
+					2005, sec. De Bonte Was, Translation mine)</sub>. Proceeds were usually
+					used to buy equipment, books, materials or to rent facilities.&#8239;<label class="sidenote-number"></label> <span class="sidenote">It is to be noted that most feminist initiatives were
+						relying on squatting, a practice less common since the Dutch squatting
+						ban of 2010.</span> Women had to earn money elsewhere,
+					some of them were working odd jobs, but most relied on governmental
+					subsidies.&#8239;<label class="sidenote-number"></label> <span class="sidenote">“The age range at De Bonte Was was between 19 and 60. We
+						all earned money quite differently: as a midwife, police officer,
+						divorced woman with six children, scientific assistant, student, etc.”
+						(Ekelschot, 2005, De Bonte Was). Many participants of the movement were
+						students and received governmental grants. Other women had unemployment
+						benefits or were working in various sectors. The quasi-absence of
+						financial compensation for activities that were extremely
+						labour-intensive also meant that some women could not engage in such
+						work for monetary reasons.<br>
+						Almost all the archives I consulted from printers, publishers and
+						periodicals included subsidies applications, to both public and private
+						organisations. Some initiatives however, like Atalanta, were reluctant
+						to request them, for ideological reasons and to preserve complete
+						freedom of creation “Applying for a subsidy was not really something
+						that was considered by anarcha-feminists; no way, we liked to stay out
+						of the grip of the government, using our benefits as a basic income. (…)
+						We consciously choose to work without subsidy, i.e. without concessions,
+						without control from outside.” (Van Vught, pp.61-62)<br>
+						These reflections are shared by other feminists, as evidenced by the
+						creation in 1983 of Mama Cash, the “the world’s first international,
+						independent women’s finance fund”, imagined by Marjan Sax, Dorelies
+						Kraakman, Tania Leon, Patti Slegers and Lida van den Broek, it aimed to
+						“launch innovative activities and to support initiatives that the
+						government would not”. (<em>Archief Mama Cash 1982-2002</em>
+						[Geschiedenis]<em>,</em> n.d.)</span></p>
+					<p>Various feminist initiatives and organizations were blossoming,
+					creating a revolutionary and diverse landscape. The desire to create a
+					space of freedom for themselves, but also to challenge the dominant
+					dynamics outside of it was a powerful driving force of the movement
+					<sub>(Travis, 2008, p.276)</sub>. <em>What gave us power is the will to
+					change the society, our situation, the way people look at us. It was a
+					very ambitious strive to change, which was inseparable from the social
+					situation and political situation.</em> Informed by other
+					socio-political movements, such as the gay, Black, anti-fascist or
+					anti-authoritarian movements, the feminist movement, far from being as
+					linear and uniform as the image of the wave may suggest, is in fact
+					characterised by its multivocality, and the variety of groups and ideas
+					expressed within them <sub>(Van Vught, 2020, p.17)</sub>. <em>We knew
+					each other’s, sometimes we were friends, sometimes we had meetings
+					together. They were often very chaotic, those meetings. We all had
+					different aims, and different conceptions and ideas about how the
+					movement should go on, or what action was necessary.</em> Those
+					discussions, as difficult as they could get, also allowed to challenge
+					the dominance of some group of women within the movement. Critiques of a
+					mostly white, heterosexual, secular feminism were brought about by
+					various groups of Black, lesbian, working class, migrant and refugee
+					women <sub>(Huisman, 2016, p.3)</sub>. Sexism started to be understood
+					as intertwined with race, sexuality, class and religion, and women who
+					were not represented in the movement organised themselves to create
+					their own practices and initiatives <sub>(De Vries, 2016)</sub>. <em>The
+					Black women had their own groups, and I was in a white group. I’m mixed,
+					my parents come from Indonesia, but my foremothers and fathers were
+					either white, Asian or Black. When the Black women began their groups
+					and their actions, it was an eye-opener for me. It made me think about
+					myself, my ethnicity, my upbringing and what was the difference between
+					me and my white friends. I’m really grateful for those early Black
+					feminists. (…) Lesbian women also initiated discussions about our place
+					in the feminist movement, as the talks and actions were always against
+					men, or about marriage, having children and so on. So we made a separate
+					group, and we called ourselves feminist radical lesbians.</em></p>
+
+					<figure> <img src="/assets/images/thesis/Print-03.jpg"> <figcaption><p>In 1986, Black women in Amsterdam founded Flamboyant, a meeting center with a library and documentation for and about black
+and migrant women. On December 13, Flamboyant, in collaboration with the Center for Ethnic Studies, is organizing a forum discussion
+about what emancipation policy can offer Black and migrant women, 1986, Atria, A1027 [poster]</p></figcaption></figure>
+                    <figure> <img  src="/assets/images/thesis/Publi-Ashanti-01.jpg"> <figcaption><p><em>Ashanti, blad voor en door surinaamse vrouwen</em> [Ashanti, magazine for and by Surinames women], 3, January-February 1981, from
+https://www.sarnamihuis.nl/posts-ihm2021/</p></figcaption></figure>
+				    <figure> <img src="/assets/images/thesis/Publi-Ashanti-02.jpg"> <figcaption><p><em>Ashanti, Surinaamse vrouwenkrant</em> [Ashanti, Surinamese women’s newspaper], 12, July-August 1982, from https://www.sarnamihuis.nl/
+posts-ihm2021/</p></figcaption></figure>
+
+					<p>De Bonte Was was considered to be a radical feminist publishing
+					house. Many initiatives in the movement qualified themselves as such
+					(radical feminist), so much so that tracing the contours of what this
+					term encompasses becomes an exercise in funambulism. <em>For me, radical
+					feminism is like feminism should be. Very critical, but also very
+					self-reflexive, on the gender roles, power dynamics, on the way women
+					were treated, and on the incorporation of various norms and codes.</em>
+					Often, groups who defined themselves as radical feminist were also
+					separatist. This strand of feminism, stemming from lesbian feminist
+					ideologies, advocated for the necessity­­—until heteropatriarchy was
+					overthrown—for women to separate themselves from men in women-only
+					enclaves <sub>(Travis, 2008, p.278)</sub>. A withdrawal that would allow
+					them to break free from the heteropatriarchal and capitalist logics that
+					were imposed on them within institutions, relationships, and activities
+					in favour of a more sustainable and supportive women’s culture. Feminist
+					separatism has been a principle widely applied in the <em>Women in Print
+					Movement</em>, that majorly consisted in women-only structures who
+					collaborated, supported each other, and shared tools or spaces <sub>(Van
+					Vught, 2020)</sub>. <em>They excluded men, from their actions, their
+					initiatives, and from their lives. It was very critical too, and some
+					women found it too much. (laughs).</em></p>
+					<p>These women’s enclaves, and the movement more generally, also sprung
+					from the friendships, romances, and diverse relationships that its
+					participants entertained with each other. A bond whereby women were able
+					to build common grounds, through which they could support each other and
+					find a sense of togetherness. <em>In the first place it was friendships,
+					joy and pleasure, from which those initiatives arose. We were a band of
+					women who were friendly with each other, sometimes more than friendly.
+					(…)</em> <em>It was important to be able to be together. We could speak
+					out the frustration and recognise that other women felt the same.</em>
+					The feminist calendar was punctuated by parties, drinks, festivals,
+					workshops, collective readings, and various meetings in cafés and
+					vrouwenhuizen, which assisted in developing and promoting a women’s
+					culture whilst cementing an expanding network. The various sites became
+					spaces for encounters, exchanges, and celebrations, for community and
+					kin-making. <em>The parties, the meetings and the discussion nights,
+					however difficult, were very important, even essential, to create a
+					sense of collectiveness.</em></p>
+			
+					<p>More than the creation and maintenance of a network, it was also its
+					expansion, both locally and internationally, that these relationships
+					catalysed. Foreign texts from contemporary and historical authors were
+					translated,&#8239;<label class="sidenote-number"></label> <span class="sidenote">Translation is crucial in the development of the
+						<em>Women in Print Movement</em>. Translating historical as well as
+						contemporary feminist texts, mostly from the United States, contributed
+						to the formation of a historical and more global bibliography of the
+						women’s movement. It is also eminently political, as this excerpt from
+						the Women’s Translation Collective De Bron shows; “The [collective]
+						started in Amsterdam in 1982, as an initiative of 5 rather critical
+						feminist translators, who neither liked how feminist, and especially
+						lesbian texts were translated, nor the position of translators. It was
+						decided that both could be radically improved by adding a new link in
+						the production chain of women’s books. (…) The collective is specialized
+						in the translation of feminist and lesbian texts. This means that we
+						work primarily for: feminist publishers, women’s studies, lesbian and
+						feminist action groups, selected government agencies” (Van Vught, 2019,
+						p.27; [Information sheet by the Translation Collective De Bron], ca.
+						1980)</span> allowing feminists to confront
+					their ideas, to exchange and to keep up to date with the evolution of
+					the movement at different scales <sub>(Travis, 2008)</sub>. <em>We had
+					some connections with women from Germany, England, the United-States and
+					from France. One of my friends was in a partnership with Monique Wittig
+					for a while. So we went to France and met other feminists, and later
+					they came here. It was funny, they were very separationist. They wanted
+					to have an island, a women’s island, where they wouldn’t have any
+					interactions with men. Once, we went on a weekend to discuss it.
+					Everyone was very excited, and we talked about it through the night. But
+					in the morning, everyone was desperate, because it turned out that we
+					all had a good reason to not go to the island just yet, ‘yes, I want the
+					island, but not yet because I have a girlfriend’ or ‘Actually, no, maybe
+					later, I can’t leave my mother’. My reason was that I didn’t want to
+					share my books (laughs).</em></p>
+					<figure> <img  src="/assets/images/thesis/Print-07.jpg"> <figcaption><p>Information sheet by the Translation Collective De Bron, 198?, printed by Las Muchachas Vrouwendrukkerij, Atria, Archive Las
+Muchachas</p></figcaption></figure>
+					
+					<p>The thought exercise that the island represents, though fictional,
+					though idealised, is akin to what they attempted within their lives and
+					practices. How do we imagine a new world outside of heteropatriarchy?
+					How do we live our relationships, how do we create and maintain
+					communities, how do we create together? A variety of responses and paths
+					emerged. Many structures operated in non-hierarchical ways, the voices
+					of every participant, no matter their level of education or involvement
+					in the initiative, counted as much as the others. <em>We always tried to
+					be ‘democratic’. At LOVER, all the decisions were made together, and we
+					talked until everybody was on the same line.</em> Tasks were distributed
+					among the women, who all worked in turn at different positions to
+					prevent forms of dominance and hierarchy from appearing <sub>(Furter,
+					2017, p.26).</sub> “Within De Bonte Was we shared intellectual and
+					manual labour as fairly as possible: thinking and writing were expected
+					of everyone, but mimeographing, packing, answering letters, visiting
+					book fairs, giving interviews, etc., as well” <sub>(Ekelschot, 2005,
+					sec. De Bonte Was, translation mine.)</sub>. The signatures are often
+					collective, insisting on the collaborative aspect of the movement’s
+					productions­—turning away from the traditional patterns of creation and
+					notion of authorship <sub>(Furter, 2017, p.3)</sub>. This also acted as
+					a protection, as some women wished to publish anonymously.
+					<sub>(Ekelschot, 2005, sec. De Bonte Was)</sub></p>
+
+					<figure> <img src="/assets/images/thesis/Print-01.jpg"> <figcaption><p>Women’s printer Virginia, women’s bookstore Xantippe and women’s café Saarein organize a women’s ball on April 26, 1979 in the
+Lido in Amsterdam, with performances by a women’s salon orchestra, Rosa King, Alice in Dixieland and DJ Anita, printed by vrouwendrukkerij
+Virginia,. Atria, A2487 [poster]</p></figcaption></figure>
+					<figure> <img src="/assets/images/thesis/Publi-Lust-01.jpg"> <figcaption><p><em>Gedwongen heteroseksualiteit en lesbisch bestaan</em> [Compulsory Heterosexuality and Lesbian Existence], Adrienne Rich, [translation from
+English: Pamela Pattynama], Stichting Lust en Gratie, 1981 - 43 p., IHLIA LGBTI Heritage collections</p></figcaption></figure>
+
+					<p>In 1985, Pamela’s student subsidies ended, and she started working at
+					the University of Amsterdam. <em>I didn’t have time anymore, and it took
+					a lot of time and work, all of this. So I stepped back, and many women
+					did too.</em> The same year, De Bonte Was published their last book.
+					From this time, she pursued a career; <em>I can’t separate my career and
+					my activism; it began in women’s studies, which became gender studies,
+					then I was in the literature department, and finally I stepped over to
+					the film department. All that time gender was my main focus,</em> a pile
+					of various books and publications, but also partnerships and life-long
+					friendships; <em>many of my friends were in the movement, and my
+					partners as well. We were doing everything together. It is very nice to
+					have friends who share a similar life story, we don’t need to explain,
+					we understand each other with half-words.</em></p>
+			</div>
+
+			<div class="chapter" id="chapter-3">
+				<div class="title chapter-3"><h1>Atalanta -</h1> <h2>Words for a better World</h2></div>
+
+				<p>This chapter is in parts an excerpt from an interview with
+					Weia Reinboud and Rymke Wiersma that took place on December
+					14<sup>th</sup>, 2022, in Utrecht, completed by external sources and
+					references. The parts in italics are their voices. <br><br></p>
+
+				<p>Rymke and Weia met in the spring of 1980 and fell in the love the
+					minute they saw each other. At least that is what Weia says. <em>No, you
+					fell in love with me! (Rymke chuckles).</em> They stayed together ever
+					since, partnering in life and in running the still active publishing
+					house Atalanta. Driven by the conviction that “the world can be much
+					nicer, thinking can be much deeper” <sub>(Reinboud &amp; Wiersma,
+					n.d.),</sub> they write, print, and publish their own works. They live
+					and work in an eco-neighbourhood of Utrecht, in a three-storey house
+					that they share with three friends. On the ground floor, a spacious room
+					that hosted their printing press for many years, is now the home of an
+					office printer, Weia’s paintings and Atalanta’s archives. All the way up
+					the stairs, just under the roof, a room bathed in light in which we sat
+					to drink tea and talk about self-publishing, walking in the mountains,
+					radical feminism, and the Dutch women’s movement.</p>
+         
+			 		<figure> <img  src="/assets/images/thesis/Atalanta-illus-02.jpg"> <figcaption><p>Illustration, n.d., Atalanta’s personnal archive</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/Atalanta-Print-Sappho.jpg"> <figcaption><p><em>Translated and calligraphed Sappho’s verse</em>, Weia Reinboud, printed by Atalanta, 1982,
+Atalanta’s personnal archive</p></figcaption></figure>
+
+					<p>At the end of 1979, Rymke, together with three other women, had the
+					idea to create a feminist printing house. None of them knew the first
+					thing about printing, and so they ask Weia, who worked for the feminist
+					printer Virginia, to teach them how to operate the small offset press
+					bought with their savings and the proceeds of a cake sale. More than her
+					expertise, she shared with the other women an enthusiasm that became
+					contagious, and she joined the team in 1980. Soon after, while traveling
+					in Greece, Rymke discovered the mythological heroine Atalanta, a
+					headstrong, swift-footed woman who was raised by a bear on Mount
+					Parthenion and devoted herself to the goddess Artemis. It is also the
+					name of “a beautiful butterfly—but all butterflies are beautiful, of
+					course, as are all woodlice!” <sub>(Reinboud &amp; Wiersma,
+					2005)</sub><em>.</em> Atalanta found a name, and soon after, a place.
+					The five women settled in a squatted space in Ridderhofstad, in Utrecht,
+					which they spent more than a year renovating. <em>It was a great time.
+					We didn’t work a lot, because there were so many discussions, so many
+					things happening, in the movement and in our lives. (Rymke)</em>. They
+					installed their small single-colour offset press in the centre of the
+					room and painted it a dark-red colour. Everything was finally ready. But
+					before they could even get to print once, the building was sold to a
+					private owner. Atalanta had to move and two of the women, soon followed
+					by a third, left the project for diverse personal reasons. Weia and
+					Rymke took their small venture alone to a new place, a women’s building
+					shared with a wood workshop and an artist space.</p>
+					<p>At the end of 1982, the first projects rolled off the press. Among
+					them, several prints for women’s restaurant <em>Eucalypta</em>, a
+					poster, some flyers, and stickers for the lesbian festival
+					<em>Pottenpracht</em>, a few posters for various women’s events, and an
+					issue of the Black feminist magazine Umoja, whose members came to help
+					with the printing. But the desire to print for other feminist
+					initiatives was soon hindered by the quirks of their old, unreliable
+					machines. The print quality was inconsistent, their darkroom consisted
+					of a large curtain of black plastic weighted down by pebbles, and the
+					press often had to be operated by hand with a crank made of copper water
+					pipes, making commissioned work difficult and stressful. After some
+					time, they focused mainly on their own productions. <em>I think we were
+					very critical too, so we worked only with a few people</em> <em>(Rymke,
+					laughing). Also, I always wanted to write, and I thought that having our
+					own print shop, I could print and publish my texts too</em>. They could
+					then adapt their designs to the whims of their machines, spend less time
+					repairing them, and devoted themselves more fully to writing, which was
+					taking up more and more of their time. In their texts, they developed a
+					radical and feminist philosophy, intertwined with their anarchist,
+					ecologist, and vegan convictions. This approach makes them difficult to
+					place in bookshops: <em>When we went to the Women’s Bookshop and showed
+					our newest things they said ‘Well, that's more for the leftist
+					Bookshop’, and when we went to the leftist bookshops they said ‘Well,
+					that's more for the ecological bookshop’ etc. (Weia).</em></p>
   
-  <div class="grid-item" id="middle-tab" onclick="toggleGrid(1)">   
-    <div class="middle-content">
-      <h1>Stories of independent feminist publishing</h1>
-      <h2>This website presents a state of research, that will probably never be final, about independent feminist publishing. Focused on the Ducth scene of second wave feminism, it strives to bridge historical and contemporary practices, local and (more) global contexts. It 
-        <span class="left-link" onclick="toggleGrid(2)">listens to their voices</span>,
-        strives to <span class="top-link" onclick="toggleGrid(5)">map their practices</span>,
-        look at <span class="bot-link" onclick="toggleGrid(3)">their production</span>,
-        and bridges all of this to <span class="right-link" onclick="toggleGrid(4)">contemporary research and publishing practices</span>.</h2>
-    </div>
-  </div>
+					<figure> <img  src="/assets/images/thesis/Publi-Zwarte-01.jpg"> <figcaption><p><em>Zwarte — Vrouwenkrant</em>, nr.4, printed by Atalanta, 1985, Atalanta’s personnal archive</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/Atalanta-Print-03.jpg"> <figcaption><p><em>Sticker for women’s restaurant Eucalypta</em>, printed by Atalanta, 1983, Atalanta’s personnal
+archive</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/Atalanta-Print-00.jpg"> <figcaption><p><em>Poster for lesbian festival Pottenpracht Utrecht</em>, printed by Atalanta, 1983, Atalanta’s personnal
+archive</p></figcaption></figure>
+					
+					<p>Being able to produce and publish their content autonomously, without
+					the influence of others, has always been and remains central in
+					Atalanta’s practice. It is more generally a driving force of the
+					<em>Women in Print Movement</em>. Many publications would not have seen
+					the light of day otherwise, as funds were lacking to afford big print
+					runs in mainstream printing houses, which were already quite reluctant
+					to print feminist publications discussing topics such as sex, women’s
+					health, abortion, lesbianism, and feminist politics. <sub>(Huisman,
+					2016, p.4)</sub> Learning the technical and practical skills was
+					therefore essential, not only to preserve autonomy, but also to follow
+					the second wave feminist idea “that the simultaneous development of
+					women’s heads and hands was necessary to prevent a divisive split
+					between radical theory and practice. Without a conscious blurring of the
+					lines between manual and mental labour, feminists risked recreating
+					among themselves the hierarchies of class, intellect, power, and so
+					forth, that they were committed to eradicating” <sub>(Travis, 2008,
+					p.280)</sub>. Just like Weia, many women were already working in the
+					printing trade before joining the movement, in which they shared their
+					knowledges and skills with other women who could, in turn, handle
+					printing and production. &#8239;<label class="sidenote-number"></label> <span class="sidenote">“We already have the Vrouwenkranten, feminist monthly
+						magazines, feminist publishers (De Bonte Was and Sara), and women’s
+						bookstores, but the technical production was until now in the hands of
+						men.” (Baart, 1978, as cited in Van Vught, 2020) This changes with the
+						creation of the Vrouwendrukkerij Virginia in 1978, probably the first
+						and largest women’s printer in the Netherlands. Virginia printed books
+						and advertisement for Sara and De Bonte Was, and miscellaneous printed
+						objects for various vrouwenhuizen [women house], café Saarein,
+						restaurant Orka la rose, periodical Serpentine, bookstore Xantippe, and
+						diverse feminist events. The following years will witness the emergence
+						of a multitude of printers throughout the country, including: Per Zet
+						(Haarlem, ?), De Kloof (Amsterdam, ?), De Dwarse Prinses (Amsterdam,
+						1981?), Oma Druck (Nijmegen, 1981?), Sidonia (Groningen, 1981), De
+						Doordrukster (Den Bosch, 1982), Las Muchachas (Amsterdam, 1982), De
+						Ziedende Zeef (Nijmegen, 1982?), De Brandweervrouw (Amsterdam, 1982),
+						Iris (Culembourg, 1983?). Mainly or exclusively producing printed
+						materials for the women’s movement, printing houses also served an
+						emancipatory function. Women who experienced gender discrimination in
+						their studies as well as the professional printing world find a place to
+						learn, share knowledge, and practice their craft in a supportive
+						environment.</p>
+						<p>The spread of this expertise
+					resulted in the creation of “both a revolutionary women’s culture—one
+					that made all women theorizers of gender—and a revolutionary print
+					culture—one that undid the specialization and professionalization that
+					had characterized printing and publishing since the early modern
+					period.” <sub>(Travis, 2008, p.281)</sub></p>
+					<p>It is also this crossroad of thought that led Atalanta to invent
+					their own modes of creation. <em>Doing everything ourselves, it followed
+					this anarchist idea to always do things your own way (Weia)</em>. They
+					paid particular attention to reducing the environmental impact of their
+					production, by using recycled materials and veganizing the printing
+					process. &#8239;<label class="sidenote-number"></label> <span class="sidenote">Offset printing is a printing technique in which a
+						rubber cylinder transfers an inked image from a printing plate (usually
+						made of aluminum or zinc) onto paper. The film used to expose the plates
+						commonly contained gelatin, a product derived from animal collagen.</span> Their ideologies resonated in the
+					designs as well, to which they attached great importance. <em>Once, we
+					were at a fair, and a man came to our stand, looked at the books, and
+					said: ‘I don’t like any of your topics, but your books are beautiful!’.
+					Another very decent gentleman was leafing through De Egeltjes. He put it
+					down, picked it up again and bought it. Shy and proud at the same time,
+					he told us: ‘I have never bought anything anarchist before’</em>
+					<em>(Weia).</em></p>
 
-  <div class="grid-item" id="left-tab" onclick="toggleGrid(2)">
-<h4>Two Stories of feminist publishing</h4>
- <div class="left-content"> 
-  <article>
-  <div class="open">I am the left content</div>
-  <div class="close">Chapter I</div>
-  <div class="close">Chapter II</div>
-  <div class="close">Chapter III</div>
-  <div class="close">Chapter IV</div>
-  </article>
-</div> 
-</div>
+					<p>(Almost) everything was made by their four hands, collaborating on
+					the illustrations, hand-drawing letters for the covers, refining them on
+					the computer, stitching or stappling freshly printed booklets. &#8239;<label class="sidenote-number"></label> <span class="sidenote">The design of the <em>Women in Print Movement</em>’s
+						productions varies greatly from one initiative to another, but also over
+						time. In the early days of the movement, many publications were produced
+						urgently, on a small scale and with few resources—all of which
+						influenced their design. They were reproduced in a manual or semi-manual
+						ways, and were often typeset, sometimes consisting of a simple stack of
+						stapled sheets, other time in bound or stapled booklets. Mostly printed
+						in black, colour could be incorporated through a second ink, or with
+						coloured paper. The design and production work were often done in-house,
+						and frequently included manual addition—illustrations, dividers,
+						lettering. As the movement grew, some publications were produced on a
+						larger scale, became thicker, some covers became hardback and the manual
+						additions and small drawings slowly disappeared, making way for images,
+						in some cases printed in full colour.</span> Weia even created their own
+					typeface, named Atalanta, a revival of a Nicolas Jenson font dating from
+					1470. Months of work, scrunched back over the small screen of their
+					newly acquired Atari computer were necessary to finish the typeface,
+					adding some roman capitals as well as an anarchist sign to the
+					renaissance lowercases. Although she studied type design briefly, she
+					mostly learned by herself. Typography was (and remains) an extremely
+					exclusive, normative field, dominated by (white, heterosexual) men, and
+					from which women were largely excluded, or restricted to certain
+					positions. A few women managed to infiltrate this small world, using
+					particular strategies, like Beatrice Warde who joined American Type
+					Founders as a specialised librarian, and published her first research
+					paper in 1927 in Le Fleuron under the pseudonym Paul Beaujon.
+					<sub>(Furter, 2020)</sub> A rarity, until the advent of early digital
+					technologies that allowed women, like Weia, to enter this field through
+					a back door.&#8239;<label class="sidenote-number"></label> <span class="sidenote">See the great article <em>Crystal Clear</em>, written by
+						Loraine Furter, about this topic: “Since many established type designers
+						have been slow to embrace or even hostile towards these new technologies
+						of making fonts, women finally have the opportunity to enter the field
+						of type design, and simultaneously become pioneers. The most famous
+						designers of this time are Susan Kare, type, and icon designer for the
+						first Apple Macintosh, Carol Twombly, who co-designed the font Myriad,
+						Virginia Howlett, designer of the font Verdana, Zuzana Licko, co-founder
+						of one of the first independent digital type foundry named Emigre and
+						type designer, Muriel Cooper, with pioneer electronic ‘typographic
+						landscapes’ at MIT’s Media Lab she founded in 1975.”<br>
+						(Furter, 2020)</span></p>
 
-  <div class="grid-item" id="bot-tab" onclick="toggleGrid(3)">
-<h4>Publications & printed production</h4>
-</div>
+					
+						<figure> <img  src="/assets/images/thesis/Atalanta-Publi-femism-tisdat-7.jpg"> <figcaption><p><em>Feminisme? Tidat?</em>, 16p., 10x16cm, 2003, written
+and printed by Atalanta, Atalanta’s personal collection</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/Atalanta-Publi-femism-tisdat-1.jpg"> <figcaption><p><em>Feminisme? Tidat?</em>, 16p., 10x16cm, 2003, written
+and printed by Atalanta, Atalanta’s personal collection</p></figcaption></figure>
+					
+					<p>Atalanta multiplied media, produce(d) music, videos, games,
+					postcards, t-shirts. So many forms which carry and spread their message
+					in different ways and in different places. &#8239;<label class="sidenote-number"></label> <span class="sidenote">This thesis focuses on publishing, but the printed
+						material found in the archives testifies to the variety and richness of
+						the movement’s cultural productions. Theatre, music and film festivals,
+						radio broadcasts, and numerous exhibitions were organized by various
+						groups and initiatives.</span>
+					This diversification of formats, and the breaking away from the
+					book-object, was found in many productions of the <em>Women in Print
+					Movement</em>. The different actions and demonstrations saw a multitude
+					of banners, t-shirts, posters, buttons, but also bodies shouting loudly
+					what they think, their anger, their messages. Challenging the
+					traditional format of the publication, these urgent artefacts, although
+					more ephemeral, still constituted ways of publishing; they made public
+					and disseminated ideas. They established in a radical way new narratives
+					and disrupted those in place, in their form as in their discourse.</p>
+					<p>To this day, Rymke and Weia, are still busy crafting and sharing
+					these disruptive stories, their ideas for a better world. Except for
+					Wednesdays, their day off, which is dedicated to long walks and
+					observing birds. Their story is quite unique within the History of
+					movement. Its longevity, the diversity of their activities, media, and
+					subjects of writing, the intertwinement of radical feminism with other
+					currents of thought—veganism, anarchism, anti-racism—the scale, which
+					remained deliberately small, allowing them to do everything themselves
+					as much as possible, from the creation of the content, to the design,
+					printing, production and distribution of the books are as many
+					particularities that make it stand out.</p>
 
-  <div class="grid-item" id="right-tab" onclick="toggleGrid(4)">
-<h4>References & Resources</h4>
-</div>
+			</div>
 
-  <div class="grid-item" id="top-tab" onclick="toggleGrid(5)">
-<h4>Mapping Feminist Practices in the Netherlands</h4></div>
-</div>
+			<div class="chapter" id="chapter-4">
+				<div class="title chapter-4"><h1>The Researcher, the Designer & the Archive</h1> <h2></h2></div>
 
-<button class="exit-button" onclick="toggleGrid(1)">X</button>
+				<p>Why am I telling you these stories? And maybe more interestingly, why
+					am I telling them in this particular way? The idea of the interviews
+					initially emerged from being confronted with the sheer volume of the
+					archive. Having found relatively little theoretical resources about the
+					movement and its development in the Netherlands, I expected this to be
+					echoed in the amount of archival material. I was surprised to discover
+					an overflowing, dense, and complex archive, in which I would soon drown,
+					unable to make a choice, to decide to focus on this or that initiative.
+					A lush, yet incomplete, unruly mass that is defined as much by what it
+					gathers as what it excludes.&#8239;<label class="sidenote-number"></label> <span class="sidenote">See note n°4 about the Archive.</span></p>
+					<p>The archive was therefore no longer just a place that provided access to
+					sources, but in turn a subject, an actor in the research, allowing a
+					better understanding of how stories are shaped, but also forgotten and
+					marginalised. Chandra Frank, in a recent article on her findings on the
+					transnational feminist lesbian exchanges between the Dutch collective
+					Sister Outsider and Audre Lorde that took place in 1984 and 1986,
+					reflects on the traces of this event in the Archive for the Women’s
+					Movement (IAV), hosted at Atria in Amsterdam, and in the Spelman College
+					Archives in Atlanta, Georgia. Comparing how they came into being and
+					have evolved, she underlines how archives—as a sites of knowledge
+					production—are informed and structured by violent mechanism of
+					exclusion, not only through the selection of material made available,
+					but also through its organization and systematization—how material can
+					(or cannot) be found: “[f]or example, within the IAV Collection there
+					are similar collectives and publications that were all part of the BMR
+					[Black, Migrant, Refugee] movement and are either coded as &lt;black
+					women&gt; or &lt;black women’s movement&gt;; yet these two terms signify
+					a different historiography when constructing a genealogy of the BMR
+					movement.”&#8239;<label class="sidenote-number"></label> <span class="sidenote">“The [IAV] collection has historically been
+						white-focused, which led early BMR archivists of colour such as Cisca
+						Pattipilohy and Troetje Loewenthal to develop a strong critique of the
+						racialised institutional memory practices of white archival
+						institutions. This eventually inspired the start of Flamboyant, the
+						first national documentation and research centre for BMR women, where
+						Sister Outsider was known to organise too. The critiques by BMR women
+						were directly related to the way that white institutions would engage,
+						code, catalogue and make available materials that pertain to racialised
+						feminist and queer histories. The earlier critiques, voiced on the
+						accessibility of materials, still resonate today as the lack of
+						specialised knowledge on the BMR movement informs how materials can be
+						found at Atria. For example, within the IAV Collection there are similar
+						collectives and publications that were all part of the BMR movement and
+						are either coded as &lt;black women&gt; or &lt;black women’s
+						movement&gt;; yet these two terms signify a different historiography
+						when constructing a genealogy of the BMR movement. The first term
+						indicates that the archival materials will be about Black women, while
+						the second suggests that the materials in this particular record are
+						part of a broader movement. These different coding systems make it
+						impossible to have an understanding of the scope of materials that are
+						related to the BMR movement in the IAV Collection.”<br />
+						(Frank, 2019, p.16)</span></p>
+					<p>She argues that the use and re-activation of those archival materials
+					does more than just activate specific stories—it becomes the embodiment
+					of the refusal to be part of a “forgotten archive” <sub>(Frank, 2019,
+					p.12)</sub>, an embodied practice of memory.</p>
+					<blockquote>
+					<p>“I am invested in both addressing the complexities of conducting
+					archival research and, inspired by Clare Hemmings (2011), asking why
+					these stories matter. (…) I argue that a transnational feminist archival
+					methodology that is rooted in a practice of ‘orientation’ (Ahmed, 2006a,
+					2006b), ‘listening’ (Campt, 2017) and ‘intervention’ (Appadurai, 2003)
+					is best placed to analyse the political solidarity forged between Sister
+					Outsider and Audre Lorde. I take this approach to ask larger questions
+					of how feminist and queer stories are told when contending with the
+					complexities and unruliness of archives. Hemmings (2011) urges feminist
+					scholars to take into consideration how narratives are constructed.
+					Similar to and beyond the academic institution that Hemmings locates as
+					a primary stakeholder in this process, the archive greatly impacts how
+					stories and their afterlives are reckoned with.” <sub>(Frank, 2019,
+					p.12)</sub></p>
+					</blockquote>
+					<p>It thus appeared important to take a step aside, one foot in the
+					personal and the other in the institutional, in order to examine it
+					better, to make a shift to not to work <em>on</em> the archive, but
+					rather <em>with it</em>. <em>Listening</em>, encountering, exchanging,
+					as ways to re-activate and put in perspective archival materials
+					appeared to me as the best suited way to conduct this study.&#8239;<label class="sidenote-number"></label> <span class="sidenote">These exchanges also proved necessary with regard to the
+						personal and emotional nature of some archival material. A matter which
+						was discussed at length with Inge Frank van Vught, in a conversation
+						about the difficulties of working with such sensitive content, as some
+						of the participants of the movement do not want to see it republished or
+						shared, and about conducting research on the stories of people with whom
+						relations of friendships and trust are developed.</span> Pamela (Pattynama), at the end of
+					our interview, told me about two young feminists—Marie Lotte Hagen and
+					Nydia van Voorthuizen—who invited Netty van Hoorn&#8239;<label class="sidenote-number"></label> <span class="sidenote">Netty Van Hoorn is a Dutch director. In 2019, she
+						released a documentary titled <em>De Stad Was van Ons — Radicaal
+						feminism in de Jaren 1970s</em> [The City Was Ours, Radical Feminism in
+						the 1970s]. Mixing historical footages, photos and interviews, this
+						documentary revisits the role of radical feminism in the women’s
+						movement through the work of various individual, groups and initiatives
+						in the Netherlands. (Van Hoorn, n.d.)</span> and
+					her to participate in an episode of their podcast DAMN, HONEY.
+					<sub>(Hagen &amp; Van Voorthuizen, 2020)</sub> The hosts were deeply
+					moved and enthusiastic upon hearing their stories, as they were
+					unfamiliar with the history and actions of the radical feminist and
+					lesbian movements. The voices, stories, individual experiences, and
+					collections of the participants of the movement are indispensable to
+					make accessible and stitch back the bits and pieces of a fragmented
+					historiography. The episode became one of the most popular of the
+					podcast, largely listened to by young women, thus demonstrating the
+					significance of transgenerational exchanges in the process reclaiming
+					and rewriting herstories that have been confiscated for too long. By
+					establishing connections between different timelines, they also allow
+					the construction of solidarity and kinship with other, crucial for
+					resisting and existing in normative spaces, as well as for future
+					feminist engagement. <sub>(Noorani &amp; Nixdorff, 2022)</sub></p>
+					<blockquote>
+					<p>“Re-vision, the act of looking back, of seeing with fresh eyes, of
+					entering an old text from a critical direction, is for women more than a
+					chapter in cultural history. It is an act of survival. We need to know
+					the writing of the past and know it differently than we ever known it.
+					Not to pass on a tradition, but to break its hold over us.”&#8239;<label class="sidenote-number"></label> <span class="sidenote">(Rich, 1979 as cited in Wekker, 2016). This quote was
+						read by (typographer and researcher) Tabea Nixdorff, for the finale of
+						the <em>Feminist Assembly Month</em>, which she co-organised with
+						(architect and researcher) Setareh Noorani at Het Nieuwe Instituut in
+						September 2022. A series of events and activities, consisting in a
+						pop-up exhibition, a movie screening, a radio show, a
+						<u>wiki-edit-a-thon</u>, a talk by Gloria Wekker, and five
+						intergenerational roundtables, which aimed to “bring together different
+						generations of feminists for a month of inspiring, urgent conversations,
+						situated around the exhibition room <em>Feminist Design
+						Strategies</em>”. This room collected and connected traces of ways in
+						which women, particularly from marginalised communities, sought to
+						challenge the unequal and predominantly white male-dominated narratives
+						in the fields of architecture, urban planning and design during the
+						second feminist wave. On a loom-like structure, photographs, documents,
+						and facsimiles—both from personal and institutional archival
+						collections—were beautifully woven together with explanatory texts, as
+						well as comments and interventions from the visitors. (Noorani &amp;
+						Nixdorff, 2022)</span></p>
+					</blockquote>
+					<p>Then, what role can the designer play in this process? As a custodian
+					of communication and publishing tools, they can act as a mediator,
+					facilitating access and re-activating content, making it public while
+					making publics <sub>(<em>xpubliverse</em>, n.d.)</sub>—transforming,
+					augmenting, disseminating, these materials via processes that gather,
+					connect, and create audiences—thus serving as a key ingredient to
+					breathe new life into archives. The L.i.P. collective&#8239;<label class="sidenote-number"></label> <span class="sidenote">The L.i.P. Collective is Zenobia Ahmed, Yanchi Huang,
+						Sophia Yuet See, Silva Baum, Phoebe Eustance, Pauline Piguet, Noemi
+						Parisi, Nina Paim, Naïma Ben Ayed, Mujgan Abdulzade, Mio Kojima, Maya
+						Ober, Mariachiara De Leo, Madeleine Morley, Loraine Furter, Klaudia
+						Mazur, Floriane Misslin, Fanny Maurel, Eugénie Zuccarelli, Elham Namvar,
+						Delphine Bedel, Corin Gisel, Clara Amante, Carolyn Kerchof, Barbora
+						Demovičová, and Amy Gowen.</span>—or
+					the Liberation in Print Collective—is a multidisciplinary, transnational
+					group of “activists, writers, graphic designers, sociologists,
+					publishers, artists, type designers, students, and educators of
+					differing ages and backgrounds” <sub>(Futuress, 2023)</sub> who joined
+					forces in an endeavour to uncover feminist stories and histories hidden
+					in digital archives. Their findings were presented in a zine and an
+					exhibition, and are still accessible through a series of online
+					articles.&#8239;<label class="sidenote-number"></label> <span class="sidenote"><a
+						href="https://futuress.org/tag/feminist-findings/">Available here</a></span> Similarly to the publishing
+					practices of the <em>Women in Print Movement</em>, blurring the
+					boundaries between disciplines, the designer becomes in turn an
+					archaeologist, a detective, a researcher, an editor, a
+					(re-)publisher.</p>
+					<blockquote>
+					<p>“In recent years, through the efforts of many archivist-activists,
+					more and more feminist periodicals are being digitized and are becoming
+					available online. Although many of them can be read and browsed for
+					free, few people know about these vast resources; the histories in—and
+					behind—their scanned pages remain largely unknown, especially to a broad
+					audience. Together as the L.i.P. Collective, we sought to find out more:
+					we solved the mystery of an underground tearoom in Paris, heard from the
+					co-founder of India’s first feminist press, corresponded with three
+					cover girls from the Soviet Union, discovered an all-Asian American
+					group of women students fighting against oppression in the 60s, and so
+					much more. And in the process of all this finding, we also found one
+					another.” <sub>(Futuress, 2023)</sub></p>
+					</blockquote>
+
+					<figure> <img  src="/assets/images/thesis/lip-1.jpg"> <figcaption><p><em>Feminist Findings,</em> The L.i.P. Collective, 2020, copyright Futuress</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/lip-3.jpg"> <figcaption><p><em>Feminist Findings,</em> The L.i.P. Collective, 2020, copyright Futuress</p></figcaption></figure>
+					<figure> <img  src="/assets/images/thesis/lip-4.jpg"> <figcaption><p><em>Feminist Findings,</em> The L.i.P. Collective, 2020, copyright Futuress</p></figcaption></figure>
+                    <figure> <img  src="/assets/images/thesis/lip-5.jpg"> <figcaption><p><em>Feminist Findings,</em> The L.i.P. Collective, 2020, copyright Futuress</p></figcaption></figure>
+
+					<p>Thus, digitalization does not (by itself) necessarily guarantee
+					broader or fairer accessibility to content, but also to publishing tools
+					and dissemination platforms. The last decades have seen the emergence of
+					new, hybrid or digital publication formats which redefine both the
+					traditional conception of the publication— “allow[ing] for forms which
+					were long de-considered and rejected from legitimate writing and history
+					to be finally included” <sub>(Furter, 2017, p.3)</sub>, and its
+					accessibility. However,</p>
+					<blockquote>
+					<p>“despite this wider access, some conditions (economic means,
+					education, censorship) make that many voices still cannot express
+					themselves. And again, when they can, there still must be someone to
+					listen to them. The attention that is due to these new forms of
+					publication, and the value that is associated aren’t spread in an equal
+					way. A blog, as accessible as it can seem, needs to be relayed to be
+					actually read, and, even if one can today use commoned software tools,
+					it needs maintenance. Through social media platforms, we have more than
+					ever access to the button “publish”, but we don’t necessarily have
+					control over the mechanisms and conditions in which it happens.
+					Publishing is a question of distribution, not only in its potential (a
+					stock of books, a pdf ready to be printed on demand, a website pushed
+					online...) but also in its actual reception by a public.” <sub>(Furter,
+					2017, p.3)</sub></p>
+					</blockquote>
+					<p>Striving for more inclusive and sustainable publishing practices
+					therefore also means to facilitate and critically reflect on, as
+					designers, not only the access to contents, but also to tools and
+					platforms.</p>
+			</div>
+			
+			<div class="chapter" id="chapter-5">
+				<div class="title chapter-5"><h1>Conclusion</h1> <h2></h2></div>
+				<p>“Mapping a feminist landscape can never be complete.”<sub>(Noorani
+					&amp; Nixdorff, n.d.)</sub> In this thesis, I recounted two stories of
+					feminist publishing, but many others are still sleeping in the archives,
+					and some never made it there. A compromised accessibility that results
+					from intersecting forms of discrimination, unjustly erasing some
+					histories, positing them in the realm of the forgotten­—the marginalised.
+					Finding them requires archaeological skills—scratching the surface of
+					the institutional, digging in the archive but also outside of it, to
+					uncover the untold stories hidden between the lines, confined in attics
+					or memories. They call for specific, hybrid methodologies, centring
+					around practices of listening, exchanging, and encountering, and by
+					connecting individuals, generations, and timelines, enabling the
+					rewriting and reclaiming of long-lost stories, as well as building
+					legacies and common grounds for future feminist efforts.</p>
+					<p>Feminist stories of publishing constitute a rich reservoir of ideas
+					and practices; dismantling traditional hierarchies and notions of
+					authorship, emphasizing the importance of collectivity, skill-sharing,
+					kin-making and autonomy, as well as creating independent networks of
+					solidarity, production and distribution.</p>
+					<p>As many proposals it feels urgent to revive in a contemporary
+					context, where access to publishing tools and platforms has been
+					transformed by the emergence of digital technologies but remain widely
+					unequal. They provide a basis to reflect upon how the designer can
+					catalyse the emancipatory potentials of publishing, by facilitating the
+					access to contents, tools, and platforms, in the pursuit of more
+					sustainable and inclusive practices.</p>
+					</body>
+			</div>
+
+			<div class="chapter" id="chapter-6">
+				<div class="title chapter-6"><h2>References</h2></div>
+<p></p>				
+<p><strong>Anzaldúa, G</strong>. (1983). Speaking in Tongues: A Letter
+to Third World Women Writer. In <em>This Bridge Called My Back: Writings
+by Radical Women of Color</em> (2nd éd., p. p.165). Kitchen Table/Women
+of Color Press.</p>
+<p><em><strong>Archive Xantippe Women’s Bookshop 1975-1997</strong></em>
+(By A. Mevis). (n.d.). [Dataset]. Atria, kennisinstituut voor
+emancipatie en vrouwengeschiedenis.</p>
+<p><strong><em>Atria, Instituut voor emancipatie, vrouwengeschiedenis en
+gendergelijkheid</em>.</strong> (n.d.). https://collectie.atria.nl/</p>
+<p><strong>Baart, S.</strong> (1978, July 18). Virginia: drukkerij voor
+vrouwen zonder machtspositie, rotklussen moet iedereen doen. <em>De
+Volkskrant</em>.</p>
+<p><strong>Biblia pauperum.</strong> (n.d.). In <em>The Library of
+Congress</em>. Retrieved February 20, 2023, from
+https://www.loc.gov/item/49038879/</p>
+<p><strong>Blackfeminisms.</strong> (2020). The Matrix of Domination and
+the Four Domains of Power. <em>Blackfeminisms.com</em>. Retrieved
+February 10, 2023, from <a
+href="https://blackfeminisms.com/matrix/">https://blackfeminisms.com/matrix/</a></p>
+<p><strong>Cadman, E.,</strong> Chester, G., &amp; Pivot, A. (1981).
+<em>Rolling our own : Women as printers, publishers and
+distributors</em>. Minority Press Group.</p>
+<p><strong>Collection IAV-Atria</strong> (n.d.), <em>Archief Xantippe
+Vrouwenboekwinkel 1975-1997</em> [Geschiedenis]. Archief Xantippe
+Vrouwenboekwinkel 1975-1997 (IIAV00000316)</p>
+<p><strong>Collection IAV-Atria</strong> (n.d.), <em>Archief Mama Cash
+1982-2002</em> [Geschiedenis]. Archief Mama Cash 1982-2002
+(IIAV00000514)</p>
+<p><strong>Collins, P. H.</strong> (1990). <em>Black Feminist Thought:
+Knowledge, Consciousness, and the Politics of Empowerment</em>.
+Hyman.</p>
+<p><strong>Colman, M. A.</strong> (2008). herstory. In <em>Oxford
+Reference</em>. Retrieved February 24, 2023, from <a
+href="https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095933417;jsessionid=462550EFA4B8194B7EA0EFEBC1C7F5C7">https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095933417;jsessionid=462550EFA4B8194B7EA0EFEBC1C7F5C7</a></p>
+<p><strong>Costanza-Chock, S.</strong> (2018). Design Justice, A.I., and
+Escape from the Matrix of Domination. <em>Journal of Design and
+Science</em>. <a
+href="https://doi.org/10.21428/96c8d426">https://doi.org/10.21428/96c8d426</a></p>
+<p><strong>Crenshaw, K.</strong> (2018). Demarginalizing the
+Intersection of Race and Sex: A Black Feminist Critique of
+Antidiscrimination Doctrine, Feminist Theory, and Antiracist Politics
+[1989]. <em>Feminist Legal Theory</em>, 57–80.
+https://doi.org/10.4324/9780429500480-5</p>
+<p><strong>Davidjgary.</strong> (2013, February 5). Summary of Darnton’s
+“What is the History of Books?” <em>Function Follows Forme</em>.
+Retrieved February 10, 2023, from <a href="https://davidjgary.wordpress.com/2013/02/05/summary-of-darntons-what-is-the-history-of-books/">https://davidjgary.wordpress.com/2013/02/05/summary-of-darntons-what-is-the-history-of-books/</a></p>
+<p><strong>De Vries, P.</strong> (2016, March 10). De tweede
+feministische golf, Feminisme 20ste eeuw. <em>Atria</em>. Retrieved
+January 5, 2023, from
+ <a href="https://atria.nl/nieuws-publicaties/feminisme/feminisme-20e-eeuw/de-tweede-feministische-golf/">https://atria.nl/nieuws-publicaties/feminisme/feminisme-20e-eeuw/de-tweede-feministische-golf/</a></p>
+<p><em>Dutch squatting ban</em>. (2023). Retrieved February 13, 2023,
+from <a href="https://en.wikipedia.org/wiki/Dutch_squatting_ban">https://en.wikipedia.org/wiki/Dutch_squatting_ban</a></p>
+<p><strong>Dżułaj, E.</strong> (2020). <em>The Phenomenon of the Private
+Press. Printing as a form of activism and resistance.</em> [Bachelor
+Thesis]. Koninklijke Academie van Beeldende Kunsten (KABK).</p>
+<p><strong><em>Edit-a-thon</em>.</strong> (2022). Retrieved February 5,
+2023, from <a href="https://outreach.wikimedia.org/wiki/Edit-a-thon">https://outreach.wikimedia.org/wiki/Edit-a-thon</a></p>
+<p><strong>Ekelschot, M.</strong> (2005). <em>De Bonte Was</em>.
+Radicaal Feminisme. Retrieved January 26, 2023, from
+<a href="http://www.radicaalfeminisme.nl/html/bontewas.html">http://www.radicaalfeminisme.nl/html/bontewas.html</a></p>
+<p><strong>Frank, C.</strong> (2019). Sister Outsider and Audre Lorde in
+the Netherlands: On Transnational Queer Feminisms and Archival
+Methodological Practices. <em>Feminist Review</em>, <em>121</em>(1),
+9–23. https://doi.org/10.1177/0141778918818753</p>
+<p><strong>Furter, L.</strong> (n.d.). <em>RESEARCH IN PROGRESS</em>.
+Retrieved February 6, 2023, from
+<a href="https://www.lorainefurter.net/research/">https://www.lorainefurter.net/research/</a></p>
+<p><strong>Furter, L.</strong> (2017). <em>Speaking Volumes: Art,
+activism and feminist publishing</em> (version 0.3) [Online
+Publication].
+<a href="https://www.lorainefurter.net/projects/speaking-volumes/speaking-volumes-EN.pdf">https://www.lorainefurter.net/projects/speaking-volumes/speaking-volumes-EN.pdf</a></p>
+<p><strong>Furter, L.</strong> (2020, August 31). Crystal Clear.
+<em>Depatriarchise Design</em>. Retrieved January 26, 2023, from
+<a href="https://depatriarchisedesign.com/2020/02/02/crystal-clear-by-loraine-furter/">https://depatriarchisedesign.com/2020/02/02/crystal-clear-by-loraine-furter/</a>></p>
+<p><strong>Futuress.</strong> (2023, January 9). The Liberation in Print
+Collective. <em>Futuress</em>. Retrieved February 6, 2023, from
+<a href="https://futuress.org/learning/lip-collective/">https://futuress.org/learning/lip-collective/</a></p>
+<p><strong>Hagen, M. L., &amp; Van Voorthuizen, N.</strong> (2020,
+November). <em>Over radicaal feminisme in de jaren 70 en liever. Met
+Netty van Hoorn en Pamela Pattynama.</em> (episode 55).</p>
+<p><strong>Huisman, M.</strong> (2016). Feministische uitgeverij Sara
+(1976-1987). Case-studie voor een inclusieve geschiedenis vande tweede
+feministische golf in Nederlands. <em>Historica 39:3</em>, 18–23.</p>
+<p><strong><em>IHLIA – LGBTI Heritage</em>.</strong> (n.d.).
+https://ihlia.nl/en/</p>
+<p><strong>Jolly, M.</strong> (2020, October 23). Print, purpose and
+profit: Women in publishing. <em>The British Library</em>. Retrieved
+January 5, 2023, from
+<a href="https://www.bl.uk/womens-rights/articles/print-purpose-and-profit-women-in-publishing">https://www.bl.uk/womens-rights/articles/print-purpose-and-profit-women-in-publishing</a></p>
+<p><strong>Ludovico, A.</strong> (2012). <em>Post-Digital Print: The
+Mutation of Publishing Since 1894 (Onomatopee, 77)</em>. Onomatopee.</p>
+<p><strong>Mimeograph | printing technology.</strong> (n.d.). In
+<em>Encyclopedia Britannica</em>.
+<a href="https://www.britannica.com/technology/mimeograph">https://www.britannica.com/technology/mimeograph</a></p>
+<p><strong>Nixdorff, T.</strong> (2022, October 8). <em>During Feminist
+Assembly Month, we wanted to bring a variety of formats together,
+acknowledging the manifold ways in which ‘the archival’ (. . .)</em>.
+Instagram. Retrieved February 5, 2023, from
+<a href="https://www.instagram.com/p/Cjbc53xIUcr/?hl=en">https://www.instagram.com/p/Cjbc53xIUcr/?hl=en</a></p>
+<p><strong>Noorani, S., &amp; Nixdorff, T.</strong> (n.d.-a).
+<em>Feminist Design Strategies</em>. Het Nieuwe Instituut, Rotterdam,
+Netherlands.</p>
+<p><strong>Noorani, S., &amp; Nixdorff, T.</strong> (n.d.-b).
+<em>Feminist Design Strategies</em>. Het Nieuwe Instituut, Rotterdam,
+Netherlands.</p>
+<p><strong>Noorani, S., &amp; Nixdorff, T</strong>. (2022, December 22).
+<em>Feminist Assembly Month Recap</em>. Designing the Social. Retrieved
+February 5, 2023, from
+<a href="https://ontwerpvanhetsociale.hetnieuweinstituut.nl/en/recap-feminist-assembly-month">https://ontwerpvanhetsociale.hetnieuweinstituut.nl/en/recap-feminist-assembly-month</a></p>
+<p><strong>Reinboud, W., &amp; Wiersma, R.</strong> (n.d.). <em>Atalanta
+anarchisme</em>. Retrieved January 3, 2023, from
+https://at-a-lanta.nl/</p>
+<p><strong>Reinboud, W., &amp; Wiersma, R.</strong> (2005, May).
+<em>Geschiedenis Atalanta</em>. Atalanta. Retrieved January 3, 2023,
+from <a href="https://at-a-lanta.nl/25jaar.html">https://at-a-lanta.nl/25jaar.html</a></p>
+<p><strong>Rich, A.</strong> (1979). <em>On Lies, Secrets and
+Silence</em>. W. W. Norton &amp; Company.</p>
+<p><strong>Samizdat | Soviet literature.</strong> (n.d.). In
+<em>Encyclopedia Britannica</em>. <a
+href="https://www.britannica.com/technology/samizdat">https://www.britannica.com/technology/samizdat</a></p>
+<p><strong>Second Wave feminism.</strong> (n.d.). In <em>Oxford
+Reference</em>. Retrieved February 20, 2023, from <a
+href="https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100451509;jsessionid=08C9B23014EACE556755BB7070AF17FB">https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100451509;jsessionid=08C9B23014EACE556755BB7070AF17FB</a></p>
+<p><strong><em>Setareh Noorani</em>.</strong> (n.d.). Retrieved February
+5, 2023, from <a href="https://setarehnoorani.nl/">https://setarehnoorani.nl/</a></p>
+<p><strong>Soulellis, P.</strong> (2021a, January). <em>Urgentcraft.
+Radical Publishing during crisis.</em> Paul Soulellis. Retrieved January
+4, 2023, from <a href="https://soulellis.com/writing/post-documenta/index.html">https://soulellis.com/writing/post-documenta/index.html</a></p>
+<p><strong>Soulellis, P.</strong> (2021b, January). <em>What is queer
+typography</em>. Paul Soulellis. Retrieved January 4, 2023, from <a href="https://soulellis.com/writing/tdc2021/">https://soulellis.com/writing/tdc2021/</a></p>
+<p><strong>Travis, T.</strong> (2008). The Women in Print Movement:
+History and Implications. <em>Book History</em>, <em>11</em>(1),
+275–300. https://doi.org/10.1353/bh.0.0001</p>
+<p><strong>Using intersectionality to understand structural inequality
+in Scotland: evidence synthesis</strong>. (2022, March 17). <em>The
+Scottish Government</em>. Retrieved February 13, 2023, from <a href="https://www.gov.scot/publications/using-intersectionality-understand-structural-inequality-scotland-evidence-synthesis/pages/3/">https://www.gov.scot/publications/using-intersectionality-understand-structural-inequality-scotland-evidence-synthesis/pages/3/</a>
+</p>
+<p><strong>Van Hoorn, N.</strong> (n.d.). <em>Netty van Hoorn</em>.
+Netty Van Hoorn, Film/Video Productions. Retrieved February 6, 2023,
+from <a href="https://www.nettyvanhoorn.nl/">https://www.nettyvanhoorn.nl/</a></p>
+<p><strong>Van Vught, I. F.</strong> (2020). <em>Vlinders, kom uit je
+kokon!</em> [MA Thesis]. Universiteit van Amsterdam.</p>
+<p><strong>Wekker, G.</strong> (2016). <em>White Innocence: Paradoxes of
+Colonialism and Race</em>. Amsterdam University Press.</p>
+<p><em><strong>What is a Risograph?</strong></em> (n.d.) <a href="https://www.riso.co.uk/risograph.html">https://www.riso.co.uk/risograph.html</a></p>
+<p><strong><em>xpubliverse</em>.</strong> (n.d.). Xpubliverse. Retrieved
+January 2, 2023, from <a href="https://xpub.nl/">https://xpub.nl/</a></p>
+<p><strong>Young, S.</strong> (1996). <em>Changing the Wor(l)d:
+Discourse, Politics and the Feminist Movement (Science)</em> (1st ed.).
+Routledge.</p>
+<p><strong>[Advertisement for Belletrien, magazine of
+literature],</strong> n.d, (A410), Collection IAV-Atria</p>
+<p><strong>[Information sheet by the Translation Collective De
+Bron],</strong> ca. 1980, Archief Vrouwendrukkerij Las Muchachas
+1983-1992 (IIAV00000521), Collection IAV-Atria</p>
+			</div>
+
+		</div>
+
+		<div class="content-publi publi-closed"> 
+			<div class="publications">
+
+				<section>
+				<h2>LOVER — Quarterly Literature Review for the Women's Movement</h2>
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/LOVER-1978-1.jpg">
+					<figcaption><p><em>LOVER 1978-1,</em> IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+					<figure>
+					<img class="publications-closed" src="/assets/images/publications/LOVER-1979-1.jpg">
+					<figcaption><p><em>LOVER 1979-3,</em> IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/LOVER-1980-3.jpg">
+					<figcaption><p><em>LOVER 1980-3,</em> IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+                 <figure>
+				<img class="publications-closed" src="/assets/images/publications/LOVER-1981-1.jpg">
+					<figcaption><p><em>LOVER 1981-3,</em> IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+					<figure>
+					<img class="publications-closed" src="/assets/images/publications/LOVER-1981-2-.jpg">
+					<figcaption><p><em>LOVER 1981-2,</em> IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/LOVER-1983-1.jpg">
+					<figcaption><p><em>LOVER 1983-1,</em> IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+			    </section>
+
+			    <section>
+				<h2>Feministiese uitgeverij de Bonte Was</h2>
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/DBW-Mannenhaat-1.jpg">
+					<figcaption><p><em>Mannenhaatverzen,</em> Marijke Ekelschot, 1992 — 12p., IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+					<figure>
+					<img class="publications-closed" src="/assets/images/publications/DBW-Calamity-2.jpg">
+					<figcaption><p><em>Brieven van Calamity Jane aan haar dochter,</em> Calamity Jane, 1977 - 55 p., IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/DBW-Fabels-1.jpg">
+					<figcaption><p><em>Feministiese fabels,</em> Suniti Namjoshi, 1983 — 97p., IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/DBW-Perkins-1.jpg">
+					<figcaption><p><em>Het gele behang</em> Charlotte Perkins Gilman, 1977 — 45p., IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+				</section>
+
+				<section>
+				<h2>Ashanti — Surinaamse Vrouwenkrant</h2>
+				<figure>
+				<img class="publications-closed" src="/assets/images/publications/Ashanti-02.jpg">
+					<figcaption><p><em>Ashanti, blad voor en door surinaamse vrouwen,</em> Jan/Feb 1981, from
+https://www.sarnamihuis.nl/posts-ihm2021/</p></figcaption>
+				</figure>
+
+			    <figure>
+				<img class="publications-closed" src="/assets/images/publications/Ashanti-01.jpg">
+					<figcaption><p><em>Ashanti, Surinaamse Vrouwenkrant,</em> Jul/Aug 1982, from
+https://www.sarnamihuis.nl/posts-ihm2021/</p></figcaption>
+				</figure>
+
+				<figure>
+				<img class="publications-closed" src="/assets/images/publications/Ashanti-03.jpg">
+					<figcaption><p><em>Ashanti, Surinaamse Vrouwenkrant,</em> Sept/Oct 1983, from
+https://www.sarnamihuis.nl/posts-ihm2021/</p></figcaption>
+				</figure>
+				</section>
+
+			    <section>
+				<h2>Lust & Gratie</h2>
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Lust-01.jpg">
+					<figcaption><p><em>Gedwongen heteroseksualiteit en lesbisch bestaan</em> [Compulsory Heterosexuality and Lesbian Existence], Adrienne Rich, [translation from
+English: Pamela Pattynama], Stichting Lust en Gratie, 1981 - 43 p., IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+			    </section>
+
+				<section>
+				<h2>Atalanta</h2>
+				<p>All of the images are from <a href="https://www.at-a-lanta.nl/">https://www.at-a-lanta.nl/</a></p>
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-Akigoloke2.jpg">
+					<figcaption><p><em>Akigoloké,</em> with Michèl Post, 1991 — 38p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-AlleDierenVrij.jpg">
+					<figcaption><p><em>Alle Dieren Vrijt,</em> compiled by P'tje Lanser and Rymke Wiersma, 1992 — 200p.</p></figcaption>
+				</figure>
+
+						<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-LeveWerkloos.jpg">
+					<figcaption><p><em>Leve de werkloosheid,</em> 1996 — 28p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-FemiTisDat.jpg">
+					<figcaption><p><em>Feminisme? Tisdat?,</em> 2003 — 16p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-KapitaalVerslaving.jpg">
+					<figcaption><p><em>Het kapitaal als verslaving,</em>2011 — 16p.</p></figcaption>
+				</figure>
 
 
-   <!-- end webpage content -->
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-PortrettenVega.jpg">
+					<figcaption><p><em>Portretten van veganisten</em>Peter (P'tje) Lanser, 2006 — 52p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-Radika.jpg">
+					<figcaption><p><em>Radi, Radika, Radka,</em>Rymke Wiersma, 1997 — 48p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-Staart.jpg">
+					<figcaption><p><em>De staart van het varken,</em> Atalanta, 1998 — 35p.</p></figcaption>
+				</figure>
+
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-TijdVoorA.jpg">
+					<figcaption><p><em>Tijd voor de Anarchie,</em> Weia Reinboud, 1991 — 23p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-VegaTisDat.jpg">
+					<figcaption><p><em>Veganisme? Tisdat?,</em> 2002 — 16p.</p></figcaption>
+				</figure>
+
+								<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-Vleermuizen.jpg">
+					<figcaption><p><em>Vleermuizen?,</em> Atalanta, 2005 — 42p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Atalanta-Publi-Vranten.jpg">
+					<figcaption><p><em>Honderduit honderd-honderd eten,</em> De Citroenvlinder, 1990 — 51p.</p></figcaption>
+				</figure>
+
+
+				</section>
+				
+				<section>
+				<h2>Zwarte — Vrouwenkrant</h2>
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Zwarte-01.jpg">
+					<figcaption><p><em>Zwarte — Vrouwenkrant</em>, nr.4, printed by Atalanta, 1985, Atalanta’s personnal archive</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Zwarte-02.jpg">
+					<figcaption><p><em>Zwarte — Vrouwenkrant</em>, nr.1, 1985, Collection IAV-Atria</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Zwarte-03.jpg">
+					<figcaption><p><em>Zwarte — Vrouwenkrant</em>, nr.5, 1985, Collection IAV-Atria</p></figcaption>
+				</figure>
+				</section>
+
+				<section>
+				<h2>Feministische Uitgeverij Sara</h2>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Sara-Lesbisch.jpg">
+					<figcaption><p><em>Lesbisch prachtboek,</em>red.: Maaike Meijer ... [et al.], 1979 - 365 p.</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Sara-1981-Soc-Fem-Teksten.jpg">
+					<figcaption><p><em>Socialisties-feministiese teksten n°6,</em>1981</p></figcaption>
+				</figure>
+			</section>
+
+				<section>
+				<h2>Katijf</h2>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Katijf-1983-feb-mart.jpg">
+					<figcaption><p><em>Katijf,</em> n.13, Feb/March 1983, LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Katijf-1984-aug.jpg">
+					<figcaption><p><em>Katijf,</em> n.22, Aug/Sept 1984, LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+								<figure>
+					<img class="publications-closed" src="/assets/images/publications/Katijf-1985.jpg">
+					<figcaption><p><em>PWant Zwijgen biedt geen bescherming, Portretten van Zwarte schrijfsters,</em> 1985 , LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Katijf-1986-feb.jpg">
+					<figcaption><p><em>Katijf,</em> nr.31, Feb 1986, LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+								<figure>
+					<img class="publications-closed" src="/assets/images/publications/Katijf-1988-aug-sep.jpg">
+					<figcaption><p><em>Katijf,</em> nr.46, Aug/Sept 1986, LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+			</section>
+
+
+			<section>
+				<h2>Sappho — Maanblad voor vriendinnen</h2>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Sappho-Cover-1.jpg">
+					<figcaption><p><em>Sappho, Maanblad vor vriendinnen,</em> nr.1, Oct 1968, IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/Sappho-Photo-1.jpg">
+					<figcaption><p><em>Sappho, fotoboekje voor vriendinnen,</em> uitgeverij upress/sappho, 197?, IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+			</section>
+
+
+			<section>
+				<h2>Paarse September</h2>
+
+				<figure>
+					<img class="publications-closed" src="/assets/images/publications/PaarseSeptember-1.jpg">
+					<figcaption><p><em>Paarse September,</em> n.2, Jan 1973, IHLIA LGBTI Heritage Collection</p></figcaption>
+				</figure>
+			</section>
+			
+
+	
+
+	
+			</div>
+		</div>
+
+		<div class="content-map map-closed"> map</div>
+
+		<div class="content-gloss gloss-closed"> 
+			<div class="definition">
+				<h2>Biblia pauperum</h2>
+				<p>Biblia pauperum, a Latin term for “pauper’s Bible”—Bible of the poor—
+				refers to block books created in medieval Europe, typically in the 14th
+				and 15th centuries, which visualized the correspondences between the Old
+				and New Testaments. They consisted mainly of a series of illustrations,
+				often accompanied by short explanatory texts written in vernacular
+				languages. This popular format, that could be compared to contemporary
+				comics, was used by the minor clergy as a visual help for prayers and
+				reflections. <sub>(“Biblia Pauperum.,” n.d.)</sub></p>
+				<h2>Book History</h2>
+				<p>Book history is an interdisciplinary field of study at the crossroad
+				of textual scholarship, codicology, bibliography, philology,
+				palaeography, art history, social history and cultural history, that
+				began to be recognized as an academic discipline in the 1980s.<br>
+				A pioneering scholar of this field is Robert Darnton, an American
+				historian who wrote extensively on the history of books and reading in
+				France and Europe during the modern era, and defined his discipline as
+				“the social and cultural history of communication by print”. In his
+				essay <em>What is the History of Books</em>? (1982), he develops a model
+				that will become foundational within the field, a “communication
+				circuit” comprising six links forming a dynamic loop; author - publisher
+				– printer – shipper – seller – reader. By considering the full scope of
+				this circuit, he encourages scholars to examine the book as an object
+				and a cultural artifact, by analyzing both its material aspects and its
+				social, economical and cultural significance in a transnational context.
+				<sub>(Davidjgary, 2013)</sub></p>
+				<h2>Edit-a-thon</h2>
+				<p>An edit-a-thon (or “editathon”) is an event, or a series of events,
+				during which people work together—online or in person—to edit, improve,
+				expand, or create wiki entries. They can be organized in very structured
+				or very informal ways, around a wide range of themes and topics—women’s
+				history, environmental issues, vernacular cultures and histories—and
+				generally about subjects that are underrepresented on the platform.
+				<sub>(<em>Edit-a-thon</em>, 2022)</sub></p>
+				<h2>Herstory</h2>
+				<p>Herstory [from <em>her</em> + <em>story</em>] is a term coined by
+				U.-S. feminist activists during the 1970s, to designate a version of
+				history written from a feminist perspective, often with a focus on the
+				experiences, contributions and achievement of women, which are usually
+				overlooked in traditional historical accounts. Herstory is thus
+				contrasted with history, which although derived from the Greek and Latin
+				<em>historia</em>, and not the contraction of <em>his</em> +
+				<em>story</em>, is inherently male-centered. <sub>(Colman,
+				2008)</sub></p>
+				<h2>Intersectionnality</h2>
+				<p>“The term ‘intersectionality’ has its roots in Black feminist
+				activism, and was originally coined by American critical legal race
+				scholar Kimberlé Williams Crenshaw in 1989. Crenshaw used the term
+				intersectionality to refer to the double discrimination of racism and
+				sexism faced by Black women, critiquing the ‘single-axis framework that
+				is dominant in antidiscrimination law.. feminist theory and anti-racist
+				politics’ for its focus on the experiences of the most privileged
+				members of subordinate groups. (…)<br>
+				Crenshaw provided the following definition of intersectionality:
+				‘Intersectionality is a metaphor for understanding the ways that
+				multiple forms of inequality or disadvantage sometimes compound
+				themselves and create obstacles that often are not understood among
+				conventional ways of thinking.’” <sub>(“Using Intersectionality to
+				Understand Structural Inequality in Scotland: Evidence Synthesis”,
+				2022)</sub></p>
+				<h2>Matrix of domination</h2>
+				<p>The matrix of domination, resonating with Kimberlé Crenshaw’s concept
+				of intersectionality, is coined by Patricia Collins in <em>Black
+				Feminist Thought: Knowledge, Consciousness, and the Politics of
+				Empowerment</em> (1990), to show how societal power relations are
+				organized by four interconnected domains (structural, hegemonic,
+				disciplinary and interpersonal domains). She thus explains how
+				capitalism, white supremacy and heteropatriarchy are interlocking
+				systems of oppression, which are experienced simultaneously by the
+				individuals who exist at their intersections, connecting (among other),
+				race, gender, class, sexuality or religion. <sub>(Collins, 1990 ;
+				Costanza-Chock, 2008)</sub></p>
+				<h2>Mimeograph</h2>
+				<p>“A mimeograph, also called stencil duplicator, was a printing machine
+				used in the mid-20th century to produce copies of documents or images.
+				It worked by using a stencil, which was placed on a rotating drum, to
+				transfer ink onto paper. The machine was manually operated, with the
+				operator cranking the drum to create the copies. Mimeographs were
+				commonly used in schools and businesses before modern photocopiers
+				became widely available.” <sub>(“Mimeograph | printing technology”,
+				n.d.)</sub></p>
+				<h2>Risograph</h2>
+				<p>The Risograph (or riso-duplicator), is a low-cost, high-volume and
+				high-speed printer. Released in Japan in 1980 by the Riso Kagaku
+				Corporation, it was initially intended for offices, schools, churches
+				and political parties, and will later know a resurgence in activist and
+				artistic circles, due to its affordability, as well as its bold and
+				textured colours. The underlying technology is close to the mimeograph,
+				and uses a digitally produced stencil, through which ink is pushed.
+				<sub>(<em>What Is a Risograph?</em>, n.d.)</sub></p>
+				<h2>Samizdat</h2>
+				<p>“Samizdat, (from Russian <em>sam</em>, “self,” and
+				<em>izdatelstvo</em>, “publishing”), literature secretly written,
+				copied, and circulated in the former Soviet Union and usually critical
+				of practices of the Soviet government. (…) Samizdat publications
+				expanded their focus beyond freedom of expression to a critique
+				of many aspects of official Soviet policies and activities, including
+				ideologies, culture, law, economic policy, historiography, and treatment
+				of religions and ethnic minorities. Because of the government’s strict
+				monopoly on presses, photocopiers, and other such devices, samizdat
+				publications typically took the form of carbon copies of typewritten
+				sheets and were passed by hand from reader to reader.” <sub>(“Samizdat |
+				Soviet Literature,” n.d.)</sub></p>
+				<h2>Second wave feminism</h2>
+				<p>“A shorthand reference for the politically active form of feminism
+				that emerged in the US and elsewhere in the 1960s. It was neither a
+				unified nor a homogeneous movement, but it did of course have a common
+				goal, however disparately this was conceived, namely the equality of the
+				sexes. It was born of the recognition that in spite of the considerable
+				advances of the retrospectively christened First Wave of feminism, women
+				had still not achieved genuine equality with men in every facet of life.
+				Its starting point, in the US, was Betty Friedan's The Feminine Mystique
+				(1963), which argues that women are trapped in a system that denies them
+				self-identity as women and demands they find fulfilment through their
+				husbands and children. Later writers, particularly those identifying as
+				radical feminists, would use the term patriarchy as a shorthand for this
+				systemic subordination of women at the level of culture itself, rather
+				than individual men.” <sub>(“Second Wave Feminism,” n.d.)</sub></p>
+			</div>
+		</div>
+	
+
+	</div>
+	<div class="grid-item block-map"><h2>Map <btn id="btn-map-open">↑</btn> <btn class="hidden" id="btn-map-close">✕</btn></h2></div>
+	<div class="grid-item block-gloss"><h2>Glossary <btn id="btn-gloss-open">↑</btn> <btn class="hidden" id="btn-gloss-close">✕</btn></h2></div>
+
+	
+
+
+
+	</div>
+
+
+
+	<!-- end webpage content -->
 
 
 

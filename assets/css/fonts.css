@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'CenturySchL';
+	src: url('../fonts/CenturySchL-Roma.otf');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CenturySchL';
+	src: url('../fonts/CenturySchL-Ital.otf');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Chaumont';
+	src: url('../fonts/ChaumontScript-Regular.otf');
+	font-style: regular;
+}
+

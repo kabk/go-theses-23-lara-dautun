@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* Tufte CSS styles */
+
+
+body {
+
+    counter-reset: sidenote-counter;
+}
+
+
+.numeral {
+    font-family:'Chaumont';
+}
+
+
+
+/* Sidenotes, margin notes, figures, captions */
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: var(--margin-side-text);
+    width: var(--width-side-text);
+    margin-bottom: 0;
+    font-size: var(--font-size-XS);
+    line-height: var(--line-height-M);
+    padding-bottom: var(--line-height-M);
+    vertical-align: baseline;
+    position: relative;
+    margin-top: 0.3rem;
+    word-spacing: 0em;
+}
+
+
+
+.sidenote-number {
+    counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: 'CenturySchL';
+    position: relative;
+    vertical-align: baseline;
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: var(--font-size-XS);
+    top: -0.3rem;
+    left: -0.1rem;
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: var(--font-size-S);
+    right:calc(var(--width-indent) + 0rem);
+
+}
+
+.sidenote:after{
+    right:20px;
+}
+
+span.sidenote {
+    top:-0.1rem;
+    text-indent: var(--width-indent);
+}
+
+@media (max-width: 779px) {
+
+  .sidenote,
+  .marginnote,
+  label {
+  display:none;
+}
+
+
+
+}

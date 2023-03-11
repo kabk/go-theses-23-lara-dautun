@@ -1,0 +1,216 @@
+@import 'fonts.css';
+
+html {
+	--gui-bg-body: #F3F3F3;
+	--gui-bg-page: #FFF;
+	--page-width: 210mm; 
+	--page-height: 297mm;
+
+	--width-main-text: 125mm;
+	--width-side-text: 55mm;
+	--width-indent:2em;
+
+	--font-size-XL: 7em;
+	--font-size-L: 5em;
+	--font-size-M: 1em;
+	--font-size-S: 0.75em;
+	--line-height-M:1.15em;
+	--line-height-S:0.9em;
+
+	--padding-def:10mm;
+
+}
+
+
+/* ------------ Text Elements ------------ */
+
+/* Typo General */
+
+h1{
+	font-family: 'Chaumont';
+	font-weight:normal;
+	font-size: var(--font-size-XL);
+	line-height: var(--line-height-S);
+	margin: 0;
+}
+
+h2{
+	font-family: 'CenturySchL';
+	font-weight:normal;
+	font-size: var(--font-size-L);
+	line-height: var(--line-height-S);
+	margin: 0;
+	padding-bottom: 20mm;
+}
+
+p{
+	font-family: 'CenturySchL';
+	font-weight:normal;
+	font-size: var(--font-size-M);
+	line-height: var(--line-height-M);
+
+	text-align: left-align;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	word-spacing: -.1em;
+	text-justify: inter-character;
+	text-align-last: left;
+
+    width: var(--width-main-text);
+	margin: 0;	
+}
+
+p + p {
+	text-indent: var(--width-indent);
+	padding-bottom: var(--line-height-M);
+}
+
+/* Specific Styles */
+
+em{
+	font-style: italic;
+	font-family: 'CenturySchL';
+}
+
+sub{
+	font-family: 'CenturySchL';
+	font-weight:normal;
+	font-size: var(--font-size-S);
+	vertical-align: baseline;
+}
+
+blockquote{
+	margin-left:var(--width-indent);
+}
+
+blockquote p{
+	width: calc(var(--width-main-text) - var(--width-indent));
+
+}
+
+
+/* ------------ Sidenotes ------------ */
+
+.appelnote{
+	font-size: 50%;
+	vertical-align: top;
+}
+
+.sidenote {
+	font-family: 'CenturySchL';
+	font-weight:normal;
+	font-size: var(--font-size-S);
+	line-height: var(--line-height-M);
+
+    display: block;
+    position: absolute;
+	padding-top:calc(var(--font-size-M) - var(--font-size-S));
+	padding-bottom: var(--line-height-M);
+}
+
+.area-sidenote-right {
+    width: var(--width-side-text); 
+	top: var(--padding-def);
+	right: var(--padding-def);  
+    position:absolute;
+}
+
+.sidenote-first{
+	top:calc(var(--line-height-S) * 36.25);
+}
+
+body { counter-reset: appelnote sidenote; }
+
+.appelnote { counter-increment: appelnote; }
+.appelnote:before { content: counter(appelnote); }
+
+.sidenote { counter-increment: sidenote; }
+.sidenote:before { content: counter(sidenote) ". "; }
+
+
+
+/* ------------ Paged.js Elements ------------ */
+
+/* Page number */
+
+.pagedjs_margin-right{
+	line-height: 1.1em;
+	font-size: 1em;
+	font-family: 'CenturySchL';
+}
+
+
+
+img{
+	width: var(--width-side-text);
+	position:absolute;
+	right:0; 
+	font-weight: normal;
+	border: thin solid black;
+}
+
+
+
+
+@media print {
+
+	@page {
+		size: 210mm 297mm;
+		margin: 10mm;
+		padding:0mm;
+	
+		@bottom-right{
+			content: counter(page);
+		  }	
+		
+	} 
+
+
+	#toc li a::before {
+		content: target-counter(attr(href), page);
+		float: left;
+		text-indent:-5mm; 
+		margin-right:5mm;
+		font-family:'Chaumont';
+		font-size: 2em;
+	  }
+
+	  #list-toc-generated {
+		list-style: none;
+	  }
+	  
+	  #list-toc-generated .toc-element {
+		break-inside: avoid;
+		
+	  } 
+
+	  #list-toc-generated a {
+		color:black;
+		text-decoration:none;
+	  } 
+
+	  #list-toc-generated a h1{
+		font-size: 2em;
+	  } 
+
+	  #list-toc-generated a h2{
+		font-size: 2em;
+		padding-bottom: 5mm;
+	  } 
+	
+	.toc-element:nth-of-type(6) {
+		padding-top:20mm;
+	  }
+	
+	  .toc-element:nth-of-type(1) {
+		padding-top:20mm;
+	  }
+
+	  
+	.chapter{
+		break-before: page;
+	}
+
+  }
+

@@ -1,102 +1,311 @@
-var gridState = 1;
+$(document).ready(function () {
+
+  //------------- VARIABLES OPEN/CLOSE TABS -------------------
+  let btnThesis = document.querySelector(".block-thesis"); 
+  let btnPubli = document.querySelector(".block-publi"); 
+  let btnMap = document.querySelector(".block-map"); 
+  let btnGloss = document.querySelector(".block-gloss"); 
+
+  let contentLanding = document.querySelector(".content-landing"); 
+  let contentThesis = document.querySelector(".content-thesis"); 
+  let contentPubli = document.querySelector(".content-publi"); 
+  let contentMap = document.querySelector(".content-map"); 
+  let contentGloss = document.querySelector(".content-gloss"); 
+
+  let btnNav = document.querySelector(".block-nav");
+  let contentNav = document.querySelector(".content-nav");
 
 
-function toggleGrid(newState) {
-  if (newState === gridState) {
-    // If the clicked state is the same as the current state, do nothing
-    return;
-  }
 
-  var gridContainer = document.querySelector('.grid-container');
-  var gridItems = document.querySelectorAll('.grid-item');
 
-  var tabRight = document.querySelector('#right-tab');
-  var tabLeft = document.querySelector('#left-tab');
-  var contentLeft = document.querySelector('.left-content');
-  var tabTop = document.querySelector('#top-tab');
-  var tabBot = document.querySelector('#bot-tab');
-  var tabMid = document.querySelector('#mid-tab');
-  var exitBtn = document.querySelector('.exit-button');
+  //------------- FUNCTIONS OPEN/CLOSE TABS -------------------
+  //THESIS
 
-  // Update grid state
-  gridState = newState;
+  btnThesis.onclick = function () {
+    document.querySelector("#btn-thesis-open").classList.toggle("hidden"); 
+    document.querySelector("#btn-thesis-close").classList.toggle("hidden"); 
+    
+    if (contentMap.classList.contains("map-open")) {
+      contentMap.classList.toggle("map-open"); 
+      contentThesis.classList.toggle("thesis-open");  
+      document.querySelector("#btn-map-open").classList.toggle("hidden"); 
+      document.querySelector("#btn-map-close").classList.toggle("hidden"); 
+    } else {
+      contentThesis.classList.toggle("thesis-open");
+      contentLanding.classList.toggle("landing-close")
+    }
+  }  
 
-  document.querySelector('.exit-button').onclick = function () {
-    console.log('click click click');
-    gridState = 1;
-  }
 
-  switch (gridState) {
-    case 1:
-      console.log('toggled to 1')
-      // Update grid styles for state 1
-      gridContainer.style.gridTemplateColumns = '3vw 1fr 3vw';
-      gridContainer.style.gridTemplateRows = '3vw 1fr 3vw';
+  //TABLE OF CONTENT
+  btnNav.onclick = function () {
+
+    document.querySelector("#btn-nav-open").classList.toggle("hidden"); 
+    document.querySelector("#btn-nav-close").classList.toggle("hidden"); 
+ 
+    if (contentNav.classList.contains("nav-closed")) {
+      contentNav.classList.toggle("nav-open");
       
-      tabRight.style.cssText = 'grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 3;';
-      tabTop.style.cssText = 'grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2;';
-      tabBot.style.cssText = 'grid-column-start: 1; grid-column-end: 4; grid-row-start: 3; grid-row-end: 4;';
-      tabLeft.style.cssText = 'grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 4;';
-      break;
+    } else {
+        contentNav.classList.toggle("nav-closed");
+        
+    }
+  }  
 
-    case 2:
-      // Update grid styles for state 2
-      gridContainer.style.gridTemplateRows = '3vw 1fr 3vw';
-      gridContainer.style.gridTemplateColumns = '1fr Ovw 3vw';
+
+ //MAP
+
+  btnMap.onclick = function () {
+    document.querySelector("#btn-map-open").classList.toggle("hidden"); 
+    document.querySelector("#btn-map-close").classList.toggle("hidden"); 
+    
+    if (contentThesis.classList.contains("thesis-open")) {
+
+      if (isMobile == true) {
+        contentMap.classList.toggle("map-open");
+      } 
+      
+      else {
+        contentThesis.classList.toggle("thesis-open");
+        contentMap.classList.toggle("map-open");
+        contentLanding.classList.toggle("landing-open");
+        document.querySelector("#btn-thesis-open").classList.toggle("hidden"); 
+        document.querySelector("#btn-thesis-close").classList.toggle("hidden"); 
+      }
   
-      tabLeft.style.cssText = 'grid-column-end:3;';
+    } else {
+      document.querySelector(".content-map").classList.toggle("map-open");
+      contentLanding.classList.toggle("landing-close");
 
-      tabRight.style.cssText = 'grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 3;';
-      tabTop.style.cssText = 'grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2;';
-      tabBot.style.cssText = 'grid-column-start: 1; grid-column-end: 4; grid-row-start: 3; grid-row-end: 4;';
-      
-      // Update styles for state 2
-      //contentLeft.classList.add('visible');
-      exitBtn.classList.toggle('visible');
-      exitBtn.onclick = function(){
-        console.log('exit clicked')
-        gridState = 1;
-      };
-      break;
+      if (contentPubli.classList.contains("publi-open")){
 
-    case 3:
-      // Update grid styles for state 3
-      gridContainer.style.gridTemplateRows = '3vw 0vw 1fr';
-      gridContainer.style.gridTemplateColumns = '3vw 1fr 3vw';
-      tabBot.style.cssText = 'grid-row-start:2; grid-column-end:2;';
+       if (isMobile == true) {
+          contentMap.style.zIndex = "100"; 
+        } 
 
-      tabLeft.style.cssText = 'grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 4;';
-      tabRight.style.cssText = 'grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 4;';
-      tabTop.style.cssText = 'grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2;';
-     
-      break;
-
-    case 4:
-      // Update grid styles for state 4
-        gridContainer.style.gridTemplateRows = '3vw 1fr 3vw';
-        gridContainer.style.gridTemplateColumns = '3vw 0vw 1fr';
-        tabRight.style.cssText = 'grid-column-start: 2; grid-row-end:3;';
-
-      tabLeft.style.cssText = 'grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 4;';
-      tabTop.style.cssText = 'grid-column-start: 1; grid-column-end: 4; grid-row-start: 1; grid-row-end: 2;';
-     tabBot.style.cssText = 'grid-column-start: 2; grid-column-end: 4; grid-row-start: 3; grid-row-end: 4;';
-     tabMid.style.cssText = 'grid-column-start: 0; grid-column-end: 0; grid-row-start: 0; grid-row-end: 0;';
-      
-      break;
-
-    case 5:
-      // Update grid styles for state 5
-  gridContainer.style.gridTemplateRows = '1fr 0vw 3vw';
-  gridContainer.style.gridTemplateColumns = '3vw 1fr 3vw';
-      tabTop.style.cssText = 'grid-row-start:1; grid-column-start:2';
-
-      tabLeft.style.cssText = 'grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 4;';
-      tabRight.style.cssText = 'grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 3;';
-      tabBot.style.cssText = 'grid-column-start: 2; grid-column-end: 4; grid-row-start: 3; grid-row-end: 4;';
-     tabMid.style.cssText = 'grid-column-start: 0; grid-column-end: 0; grid-row-start: 0; grid-row-end: 0;';
-      
+        else {}
+  
+      }
     
     }
-
   }
-     
+
+  //PUBLICATIONS
+
+  btnPubli.onclick = function () {
+     document.querySelector("#btn-publi-open").classList.toggle("hidden"); 
+    document.querySelector("#btn-publi-close").classList.toggle("hidden"); 
+    
+    if (contentGloss.classList.contains("gloss-open")) {
+
+        contentGloss.classList.toggle("gloss-open-half");
+        contentPubli.classList.toggle("publi-open-half"); 
+      
+    } else {
+      contentPubli.classList.toggle("publi-open");
+
+      if (contentPubli.classList.contains("publi-open-half")) {
+        console.log('yo yo');
+        contentPubli.classList.toggle("publi-open-half");
+        contentGloss.classList.remove("gloss-open-half");
+        contentGloss.classList.toggle("gloss-open");
+      } else {
+
+      }
+    }
+  } 
+
+  //GLOSSARY
+
+    btnGloss.onclick = function () {
+      document.querySelector("#btn-gloss-open").classList.toggle("hidden"); 
+      document.querySelector("#btn-gloss-close").classList.toggle("hidden"); 
+      
+       if (contentPubli.classList.contains("publi-open")) {
+        if (isMobile == true) {
+          contentGloss.classList.toggle("gloss-open");
+        } 
+  
+        else {
+      contentGloss.classList.toggle("gloss-open-half");
+      contentPubli.classList.toggle("publi-open-half");
+        }
+    } else {
+         contentGloss.classList.toggle("gloss-open");
+         
+        if (contentGloss.classList.contains("gloss-open-half")) {
+
+        contentGloss.classList.toggle("gloss-open-half");
+        contentPubli.classList.remove("publi-open-half");
+        contentPubli.classList.toggle("publi-open");
+      } else {
+
+      }
+    }
+  } 
+
+
+
+ //------------- INTERACTIVE TABLE OF CONTENT THESIS -------------------
+
+  let chapterNumber = 0;
+
+  document.querySelector(".content-thesis").addEventListener("scroll", function(){
+    if(document.querySelector(".title.chapter-1").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+      chapterNumber = 1;
+      
+    }
+    if(document.querySelector(".title.chapter-2").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+      chapterNumber = 2;
+    }
+
+    if(document.querySelector(".title.chapter-3").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+      chapterNumber = 3;
+      
+    }
+    if(document.querySelector(".title.chapter-4").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+      chapterNumber = 4;
+    }
+
+    if(document.querySelector(".title.chapter-5").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+      chapterNumber = 5;
+      
+    }
+    if(document.querySelector(".title.chapter-6").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+      chapterNumber = 6;
+    }
+
+    console.log(chapterNumber);
+    document.querySelector(`li.chapter-${chapterNumber}`).classList.add("active");
+
+    document.querySelectorAll("li").forEach(function(listItems){
+      if(!listItems.classList.contains(`chapter-${chapterNumber}`)){
+        listItems.classList.remove("active");
+      }
+    })
+  })
+
+  document.querySelectorAll('li').forEach(function (chapterItems) {
+    chapterItems.addEventListener('click', function () {
+        document.querySelectorAll('.title').forEach(function (chapterHeadlines) {
+
+          if (chapterItems.textContent.substring(0, 3) == chapterHeadlines.textContent.substring(0, 3)) {
+            chapterHeadlines.scrollIntoView({ behavior: "smooth", block: "start" });
+          };
+ 
+        })
+    })
+  })
+
+
+  //------------- IMAGE RESIZE ONCLICK PUBLICATIONS ------------------
+
+  document.querySelectorAll(".publications img").forEach(function (resizeImg) { 
+    resizeImg.addEventListener('click', function() {
+    resizeImg.classList.toggle("publications-open");
+  })
+    })
+
+  
+      
+    //------------- DETECTION WINDOW SIZE -------------------
+
+    let isMobile = "";
+
+    $(window).on("load resize click", function(){
+  
+      if ($(window).width() < 779) {
+        isMobile = true;    
+        console.log(isMobile);
+  
+      } else {
+        console.log(isMobile);
+        isMobile = false;
+      }
+    });
+  
+  
+      $(window).on("resize", function(){
+  
+        if (contentNav.classList.contains("nav-open")) {
+        
+          if (isMobile == true) {
+          contentNav.classList.toggle("nav-open");
+        } else {}
+  
+      } else {
+  
+      }
+      });
+  
+  
+        //------------- IMAGE ANGLE THESIS ------------------
+  
+  const images = document.querySelectorAll(".chapter figure");
+  const minRotation = -9;
+  const maxRotation = 9;
+  const minMargin = -2;
+  const maxMargin= 8;
+  
+
+  
+       images.forEach((image) => {
+
+    const randomRotation = Math.floor(Math.random() * (maxRotation - minRotation + 1) + minRotation);
+      const randomMargin = Math.floor(Math.random() * (maxMargin - minMargin + 1) + minMargin);
+    
+    
+      if (isMobile == false) {
+        console.log('is mobile was false');
+        image.style.marginRight = `${randomMargin}vw`;
+        image.style.transform = `rotate(${randomRotation}deg)`;
+
+      } else {
+
+        console.log('is mobile was true');
+      image.style.marginRight = '0px';
+        image.style.transform = 'rotate(0deg)';
+      }
+    
+ 
+  });
+
+  
+      $(window).on("resize", function(){
+  
+       images.forEach((image) => {
+
+    const randomRotation = Math.floor(Math.random() * (maxRotation - minRotation + 1) + minRotation);
+      const randomMargin = Math.floor(Math.random() * (maxMargin - minMargin + 1) + minMargin);
+    
+    
+      if (isMobile == false) {
+        console.log('is mobile was false');
+        image.style.marginRight = `${randomMargin}vw`;
+        image.style.transform = `rotate(${randomRotation}deg)`;
+
+      } else {
+
+        console.log('is mobile was true');
+      image.style.marginRight = '0px';
+        image.style.transform = 'rotate(0deg)';
+      }
+    
+ 
+  });
+    });
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+});
+
