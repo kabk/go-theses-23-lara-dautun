@@ -317,57 +317,135 @@ $(document).ready(function () {
 
      //------------- MAP ZOOM------------------
 
-     const svg = document.querySelector('svg');
+    //  const svg = document.querySelector('svg');
 
-     let isDragging = false;
-     let startX, startY;
-     let translateX = 0, translateY = 0;
-     let scale = 1;
+    //  let isDragging = false;
+    //  let startX, startY;
+    //  let translateX = 0, translateY = 0;
+    //  let scale = 1;
      
-     svg.addEventListener('wheel', (event) => {
-       event.preventDefault();
-       const delta = event.deltaY > 0 ? 0.1 : -0.1;
-       scale += delta;
-       scale = Math.max(scale, 0.1);
-       scale = Math.min(scale, 10);
-       svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-     });
+    //  svg.addEventListener('wheel', (event) => {
+    //    event.preventDefault();
+    //    const delta = event.deltaY > 0 ? 0.1 : -0.1;
+    //    scale += delta;
+    //    scale = Math.max(scale, 0.1);
+    //    scale = Math.min(scale, 10);
+    //    svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    //  });
      
-     svg.addEventListener('mousedown', (event) => {
-       isDragging = true;
-       startX = event.clientX;
-       startY = event.clientY;
-     });
+    //  svg.addEventListener('mousedown', (event) => {
+    //    isDragging = true;
+    //    startX = event.clientX;
+    //    startY = event.clientY;
+    //  });
      
-     svg.addEventListener('mousemove', (event) => {
-       if (!isDragging) return;
-       const deltaX = event.clientX - startX;
-       const deltaY = event.clientY - startY;
-       translateX += deltaX / scale;
-       translateY += deltaY / scale;
-       svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-       startX = event.clientX;
-       startY = event.clientY;
-     });
+    //  svg.addEventListener('mousemove', (event) => {
+    //    if (!isDragging) return;
+    //    const deltaX = event.clientX - startX;
+    //    const deltaY = event.clientY - startY;
+    //    translateX += deltaX / scale;
+    //    translateY += deltaY / scale;
+    //    svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    //    startX = event.clientX;
+    //    startY = event.clientY;
+    //  });
      
-     svg.addEventListener('mouseup', (event) => {
-       isDragging = false;
-     });
+    //  svg.addEventListener('mouseup', (event) => {
+    //    isDragging = false;
+    //  });
+
+
+    const svg = document.querySelector('svg');
+
+let isDragging = false;
+let startX, startY;
+let translateX = 0, translateY = 0;
+let scale = 1;
+
+svg.addEventListener('wheel', (event) => {
+  event.preventDefault();
+  const delta = event.deltaY > 0 ? 0.1 : -0.1;
+  scale += delta;
+  scale = Math.max(scale, 0.1);
+  scale = Math.min(scale, 10);
+  svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+});
+
+svg.addEventListener('mousedown', (event) => {
+  isDragging = true;
+  startX = event.clientX;
+  startY = event.clientY;
+});
+
+svg.addEventListener('touchstart', (event) => {
+  if (event.touches.length === 2) {
+    const touch1 = event.touches[0];
+    const touch2 = event.touches[1];
+    const dist = Math.sqrt((touch1.clientX - touch2.clientX) ** 2 + (touch1.clientY - touch2.clientY) ** 2);
+    svg.dataset.startDistance = dist;
+  } else if (event.touches.length === 1) {
+    isDragging = true;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  }
+});
+
+svg.addEventListener('mousemove', (event) => {
+  if (!isDragging) return;
+  const deltaX = event.clientX - startX;
+  const deltaY = event.clientY - startY;
+  translateX += deltaX / scale;
+  translateY += deltaY / scale;
+  svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+  startX = event.clientX;
+  startY = event.clientY;
+});
+
+svg.addEventListener('touchmove', (event) => {
+  if (event.touches.length === 2) {
+    const touch1 = event.touches[0];
+    const touch2 = event.touches[1];
+    const dist = Math.sqrt((touch1.clientX - touch2.clientX) ** 2 + (touch1.clientY - touch2.clientY) ** 2);
+    const startDist = svg.dataset.startDistance;
+    const delta = (dist - startDist) / 1000;
+    scale += delta;
+    scale = Math.max(scale, 0.1);
+    scale = Math.min(scale, 10);
+    svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+  } else if (event.touches.length === 1) {
+    const deltaX = event.touches[0].clientX - startX;
+    const deltaY = event.touches[0].clientY - startY;
+    translateX += deltaX / scale;
+    translateY += deltaY / scale;
+    svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  }
+});
+
+svg.addEventListener('mouseup', (event) => {
+  isDragging = false;
+});
+
+svg.addEventListener('touchend', (event) => {
+  isDragging = false;
+});
+
      
 
       
     //------------- DETECTION WINDOW SIZE -------------------
 
     let isMobile = "";
+    let svgMap = document.querySelector('svg');
 
     $(window).on("load resize click", function(){
   
       if ($(window).width() < 779) {
         isMobile = true;    
-        console.log(isMobile);
+        svgMap.setAttribute("viewBox", "50 0 500 500");
   
       } else {
-        console.log(isMobile);
         isMobile = false;
       }
     });
