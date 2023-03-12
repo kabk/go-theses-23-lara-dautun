@@ -580,6 +580,7 @@ blockquote{
   right:0;
   top:0;
   margin: var(--margin);
+  padding-top: var(--margin);
   width:var(--width-side-tab);
 }
 
@@ -771,7 +772,7 @@ thead th, tbody td {
   div.page-wrapper {
   display:grid;
   grid-template-columns: 100vw;
-  grid-template-rows: calc(100vh - 5 * var(--height-block)) var(--height-block)  var(--height-block) var(--height-block)  var(--height-block) var(--height-block);
+  grid-template-rows: calc(100vh - 6 * var(--height-block)) var(--height-block)  var(--height-block) var(--height-block)  var(--height-block) var(--height-block);
  
 }
 
