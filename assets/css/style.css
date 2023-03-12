@@ -30,6 +30,7 @@
 
     /* Text Settings */
   --width-main-text: 66.66vw;
+  --width-side-tab: calc(33.33vw - 2 * var(--margin) );
 	--width-side-text: calc(33.33vw - 4 * var(--margin) );
   --margin-side-text: -33.33vw;
 	--width-indent:2em;
@@ -52,7 +53,6 @@ body {
   color: var(--color-text);
   width:100%;
   height:auto;
-  /* overflow-y:auto; */
 }
 
 h1{
@@ -113,6 +113,7 @@ a:visited{
   color:var(--color-text);
   text-decoration:underline;
 }
+
 
 
 /* -------- PAGE STRUCTURE -------- */
@@ -566,6 +567,69 @@ blockquote{
 }
 
 
+/* ---- Map page ----*/
+.map-container{
+  height:90vh;
+  width: var(--width-main-text);
+  overflow:hidden;
+  cursor:grab;
+}
+
+.map-extra{
+  position:absolute;
+  right:0;
+  top:0;
+  margin: var(--margin);
+  width:var(--width-side-tab);
+}
+
+.map-buttons{
+  display:table-caption;
+}
+
+.map-buttons button{
+  background: none;
+  cursor: pointer;
+	color: inherit;
+	border: none;
+	padding: 0; margin:0;
+}
+
+.map-buttons button h2:hover{
+  font-family:'chaumont';
+} 
+
+.map-active h2{
+  font-family:'chaumont';
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+.map-buttons h2{
+	padding: 0; margin:0;
+  
+}
+
+svg {
+  overflow: auto;
+}
+
+svg > * {
+  transform-origin: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size:var(--font-size-XS);
+}
+
+thead th, tbody td {
+  padding-bottom: calc(var(--margin) / 2);
+  vertical-align: top; 
+}
+
+
 
 /* ---- Glossary page ----*/
 
@@ -607,6 +671,9 @@ blockquote{
   display:none;
 }
 
+.visible{
+  display:block;
+}
 
 /* ------------ MEDIA QUERIES ------------ */
 
@@ -877,6 +944,34 @@ padding: calc(var(--margin) * 2);
   width: calc(100vw - var(--margin) * 5);
   margin:0; padding:0;
 }
+
+
+/* ---- Map page ----*/
+.map-container{
+  height:calc(65vh - var(--margin) * 2);
+  width: 100vw;
+  overflow:hidden;
+  padding: calc(var(--margin) * 2);
+}
+
+.map-extra{
+  display:flex;
+  position:absolute;
+  top: calc(65vh + var(--margin) * 2);
+  left:0;
+  margin: var(--margin);
+}
+
+.map-description{
+  padding-left: calc(var(--margin) * 2);
+}
+
+.map-description p{
+  width: 66.66vw;
+  font-size:var(--font-size-S);
+  margin-top:0;
+}
+
 
 
 

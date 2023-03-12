@@ -212,6 +212,149 @@ $(document).ready(function () {
     })
 
   
+
+//------------- MAP LAYERS ------------------
+    document.querySelector('.button-pub').onclick = function () {
+      this.classList.toggle("map-active");
+      document.querySelector('#publishers').classList.toggle("visible");
+      document.querySelector('#map-desc-publi').classList.toggle("visible");
+
+      if(document.querySelector('#printers').classList.contains("visible")){
+        document.querySelector('#printers').classList.toggle("visible");
+        document.querySelector('#map-desc-print').classList.toggle("visible");
+        document.querySelector('.button-print').classList.toggle("map-active");
+
+      }
+      
+      if(document.querySelector('#shops').classList.contains("visible")){
+        document.querySelector('#shops').classList.toggle("visible");
+        document.querySelector('#map-desc-shop').classList.toggle("visible");
+        document.querySelector('.button-shop').classList.toggle("map-active");
+      }
+
+      if(document.querySelector('#periodicals').classList.contains("visible")){
+        document.querySelector('#periodicals').classList.toggle("visible");
+        document.querySelector('#map-desc-perio').classList.toggle("visible");
+        document.querySelector('.button-perio').classList.toggle("map-active");
+      }
+
+}
+
+    document.querySelector('.button-print').onclick = function () {
+      this.classList.toggle("map-active");
+      document.querySelector('#printers').classList.toggle("visible");
+      document.querySelector('#map-desc-print').classList.toggle("visible");
+
+      if(document.querySelector('#publishers').classList.contains("visible")){
+        document.querySelector('#publishers').classList.toggle("visible");
+        document.querySelector('#map-desc-publi').classList.toggle("visible");
+        document.querySelector('.button-pub').classList.toggle("map-active");
+      }
+      
+      if(document.querySelector('#shops').classList.contains("visible")){
+        document.querySelector('#shops').classList.toggle("visible");
+        document.querySelector('#map-desc-shop').classList.toggle("visible");
+        document.querySelector('.button-shop').classList.toggle("map-active");
+      }
+
+      if(document.querySelector('#periodicals').classList.contains("visible")){
+        document.querySelector('#periodicals').classList.toggle("visible");
+        document.querySelector('#map-desc-perio').classList.toggle("visible");
+        document.querySelector('.button-perio').classList.toggle("map-active");
+      }
+}
+
+    document.querySelector('.button-shop').onclick = function () {
+      this.classList.toggle("map-active");
+      document.querySelector('#shops').classList.toggle("visible");
+      document.querySelector('#map-desc-shop').classList.toggle("visible");
+
+      if(document.querySelector('#printers').classList.contains("visible")){
+        document.querySelector('#printers').classList.toggle("visible");
+        document.querySelector('#map-desc-print').classList.toggle("visible");
+        document.querySelector('.button-print').classList.toggle("map-active");
+
+      }
+      
+      if(document.querySelector('#publishers').classList.contains("visible")){
+        document.querySelector('#publishers').classList.toggle("visible");
+        document.querySelector('#map-desc-publi').classList.toggle("visible");
+        document.querySelector('.button-pub').classList.toggle("map-active");
+      }
+
+      if(document.querySelector('#periodicals').classList.contains("visible")){
+        document.querySelector('#periodicals').classList.toggle("visible");
+        document.querySelector('#map-desc-perio').classList.toggle("visible");
+        document.querySelector('.button-perio').classList.toggle("map-active");
+      }
+}
+
+      document.querySelector('.button-perio').onclick = function () {
+        this.classList.toggle("map-active");
+      document.querySelector('#periodicals').classList.toggle("visible");
+      document.querySelector('#map-desc-perio').classList.toggle("visible");
+
+      if(document.querySelector('#printers').classList.contains("visible")){
+        document.querySelector('#printers').classList.toggle("visible");
+        document.querySelector('#map-desc-print').classList.toggle("visible");
+        document.querySelector('.button-print').classList.toggle("map-active");
+
+      }
+      
+      if(document.querySelector('#shops').classList.contains("visible")){
+        document.querySelector('#shops').classList.toggle("visible");
+        document.querySelector('#map-desc-shop').classList.toggle("visible");
+        document.querySelector('.button-shop').classList.toggle("map-active");
+      }
+
+      if(document.querySelector('#publishers').classList.contains("visible")){
+        document.querySelector('#publishers').classList.toggle("visible");
+        document.querySelector('#map-desc-publi').classList.toggle("visible");
+        document.querySelector('.button-pub').classList.toggle("map-active");
+      }
+}
+
+
+     //------------- MAP ZOOM------------------
+
+     const svg = document.querySelector('svg');
+
+     let isDragging = false;
+     let startX, startY;
+     let translateX = 0, translateY = 0;
+     let scale = 1;
+     
+     svg.addEventListener('wheel', (event) => {
+       event.preventDefault();
+       const delta = event.deltaY > 0 ? 0.1 : -0.1;
+       scale += delta;
+       scale = Math.max(scale, 0.1);
+       scale = Math.min(scale, 10);
+       svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+     });
+     
+     svg.addEventListener('mousedown', (event) => {
+       isDragging = true;
+       startX = event.clientX;
+       startY = event.clientY;
+     });
+     
+     svg.addEventListener('mousemove', (event) => {
+       if (!isDragging) return;
+       const deltaX = event.clientX - startX;
+       const deltaY = event.clientY - startY;
+       translateX += deltaX / scale;
+       translateY += deltaY / scale;
+       svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+       startX = event.clientX;
+       startY = event.clientY;
+     });
+     
+     svg.addEventListener('mouseup', (event) => {
+       isDragging = false;
+     });
+     
+
       
     //------------- DETECTION WINDOW SIZE -------------------
 
@@ -328,4 +471,7 @@ $(document).ready(function () {
   
 
 });
+
+
+
 
