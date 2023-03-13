@@ -323,6 +323,7 @@ nav .chapter-6 h2{
 .block-thesis h2, .block-publi h2, .block-map h2, .block-gloss h2{
   line-height:var(--height-block);
 }
+
 /* ---- Landing Page ----*/
 
 .content-landing{
