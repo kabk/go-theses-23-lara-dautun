@@ -63,6 +63,7 @@ $(document).ready(function () {
 
       if (isMobile == true) {
         contentMap.classList.toggle("map-open");
+        contentMap.style.zIndex = "100"; 
         
         if (contentPubli.classList.contains("publi-open")){
           console.log('publi is open');
@@ -426,8 +427,6 @@ svg.addEventListener('touchend', (event) => {
   
       }
       });
-
-  
   
         //------------- IMAGE ANGLE THESIS ------------------
   
