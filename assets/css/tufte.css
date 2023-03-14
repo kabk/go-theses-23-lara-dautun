@@ -32,7 +32,6 @@ counter-reset: sidenote-counter;
 }
 
 
-
 .sidenote-number {
     counter-increment: sidenote-counter;
 }
@@ -48,14 +47,13 @@ counter-reset: sidenote-counter;
     content: counter(sidenote-counter);
     font-size: var(--font-size-XS);
     top: -0.3rem;
-    left: -0.1rem;
+    left: -0.2rem;
 }
 
 .sidenote:before {
     content: counter(sidenote-counter) " ";
     font-size: var(--font-size-S);
     right:calc(var(--width-indent) + 0rem);
-
 }
 
 .sidenote:after{
@@ -67,14 +65,34 @@ span.sidenote {
     text-indent: var(--width-indent);
 }
 
+.sidenote-mobile{
+    display:none;
+}
+
 @media (max-width: 779px) {
 
-  .sidenote,
-  .marginnote,
-  label {
+  .sidenote
+ {
   display:none;
 }
 
+.sidenote-mobile{
+    display:block;
+    font-size: var(--font-size-XS);
+    line-height: var(--line-height-M);
+    padding-bottom: var(--line-height-M);
+    vertical-align: baseline;
+}
 
+.sidenote-mobile{
+    width:calc(100vw - var(--width-side-text))
+}
+
+.sidenote-mobile sup{
+    font-size: var(--font-size-S);
+    top: 0rem;
+    left: 0rem;
+    margin-right:2em;
+}
 
 }

@@ -20,6 +20,10 @@ html {
 
 	--padding-def:10mm;
 	--margin:0.5rem;
+
+	--color-theme-1: rgba(225,225,225,1);
+
+	--color-theme-5: rgba(190,190,190,1);
 	
 
 }
@@ -90,8 +94,8 @@ blockquote{
 
 blockquote p{
 	width: calc(var(--width-main-text) - var(--width-indent));
-
 }
+
 
 
 
@@ -211,8 +215,56 @@ figcaption p{
 .references a{
 	color:black;
     text-decoration:none;
-
 }
+
+/* ------------ Map ------------ */
+
+.map-publi svg, .map-print svg, .map-perio svg, .map-shop svg {
+	height:155mm;
+	width:auto;
+	display:block;
+	margin:auto;
+}
+
+.map h2{
+	padding-bottom:calc(var(--margin) * 2);
+}
+
+.map p{
+	width:100%;
+}
+
+.map table{
+	font-family: 'CenturySchL';
+	font-size: var(--font-size-S);
+	line-height: var(--line-height-S);
+}
+
+.map-perio table{
+	display:table-cell;
+	padding-right:var(--margin);
+}
+
+.map-desc{
+	position:absolute;
+	bottom:0;
+}
+
+.map-desc h2{
+		font-family: 'chaumont';
+		font-size:var(--font-size-ML);
+		padding:0;margin:0;
+		padding-top:calc(var(--margin) * 2);;
+}
+
+table{
+	width: 95mm;
+}
+
+thead th, tbody td {
+	padding-bottom: calc(var(--margin) / 2);
+	vertical-align: top; 
+  }
 
 /* ------------ Paged.js Elements ------------ */
 

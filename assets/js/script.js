@@ -156,27 +156,27 @@ $(document).ready(function () {
   let chapterNumber = 0;
 
   document.querySelector(".content-thesis").addEventListener("scroll", function(){
-    if(document.querySelector(".title.chapter-1").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+    if(document.querySelector(".title.chapter-1").getBoundingClientRect().top < (window.innerHeight / 100)*7){
       chapterNumber = 1;
       
     }
-    if(document.querySelector(".title.chapter-2").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+    if(document.querySelector(".title.chapter-2").getBoundingClientRect().top < (window.innerHeight / 100)*7){
       chapterNumber = 2;
     }
 
-    if(document.querySelector(".title.chapter-3").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+    if(document.querySelector(".title.chapter-3").getBoundingClientRect().top < (window.innerHeight / 100)*7){
       chapterNumber = 3;
       
     }
-    if(document.querySelector(".title.chapter-4").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+    if(document.querySelector(".title.chapter-4").getBoundingClientRect().top < (window.innerHeight / 100)*7){
       chapterNumber = 4;
     }
 
-    if(document.querySelector(".title.chapter-5").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+    if(document.querySelector(".title.chapter-5").getBoundingClientRect().top < (window.innerHeight / 100)*7){
       chapterNumber = 5;
       
     }
-    if(document.querySelector(".title.chapter-6").getBoundingClientRect().top < (window.innerHeight / 100)*5){
+    if(document.querySelector(".title.chapter-6").getBoundingClientRect().top < (window.innerHeight / 100)*7){
       chapterNumber = 6;
     }
 
@@ -317,44 +317,6 @@ $(document).ready(function () {
 
      //------------- MAP ZOOM------------------
 
-    //  const svg = document.querySelector('svg');
-
-    //  let isDragging = false;
-    //  let startX, startY;
-    //  let translateX = 0, translateY = 0;
-    //  let scale = 1;
-     
-    //  svg.addEventListener('wheel', (event) => {
-    //    event.preventDefault();
-    //    const delta = event.deltaY > 0 ? 0.1 : -0.1;
-    //    scale += delta;
-    //    scale = Math.max(scale, 0.1);
-    //    scale = Math.min(scale, 10);
-    //    svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    //  });
-     
-    //  svg.addEventListener('mousedown', (event) => {
-    //    isDragging = true;
-    //    startX = event.clientX;
-    //    startY = event.clientY;
-    //  });
-     
-    //  svg.addEventListener('mousemove', (event) => {
-    //    if (!isDragging) return;
-    //    const deltaX = event.clientX - startX;
-    //    const deltaY = event.clientY - startY;
-    //    translateX += deltaX / scale;
-    //    translateY += deltaY / scale;
-    //    svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    //    startX = event.clientX;
-    //    startY = event.clientY;
-    //  });
-     
-    //  svg.addEventListener('mouseup', (event) => {
-    //    isDragging = false;
-    //  });
-
-
     const svg = document.querySelector('svg');
 
 let isDragging = false;
@@ -444,6 +406,7 @@ svg.addEventListener('touchend', (event) => {
       if ($(window).width() < 779) {
         isMobile = true;    
         svgMap.setAttribute("viewBox", "50 0 500 500");
+        document.querySelector(":root").style.setProperty("--height-window", window.innerHeight);
   
       } else {
         isMobile = false;

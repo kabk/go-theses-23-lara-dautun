@@ -37,6 +37,7 @@
 
    /* Other settings */
   --height-block: 6vh;
+
 }
 
 
@@ -400,11 +401,11 @@ margin:0; padding:0;
 }
 
 #chapter-2 figure:nth-of-type(1){
- margin-top:-10rem;
+ margin-top:-4rem;
 }
 
 #chapter-2 figure:nth-of-type(2){
- margin-top:1rem;
+ margin-top:7rem;
 }
 
 #chapter-2 figure:nth-of-type(3){
@@ -416,7 +417,7 @@ margin:0; padding:0;
 }
 
 #chapter-2 figure:nth-of-type(5){
- margin-top:-13rem;
+ margin-top:-10rem;
 }
 
 #chapter-2 figure:nth-of-type(6){
@@ -460,11 +461,11 @@ margin:0; padding:0;
 }
 
 #chapter-3 figure:nth-of-type(6){
- margin-top:20rem;
+ margin-top:22rem;
 }
 
 #chapter-3 figure:nth-of-type(7){
- margin-top:27rem;
+ margin-top:30rem;
 }
 
 #chapter-4 figure:nth-of-type(1){
@@ -570,7 +571,7 @@ blockquote{
 
 /* ---- Map page ----*/
 .map-container{
-  height:90vh;
+  height:88vh;
   width: var(--width-main-text);
   overflow:hidden;
   cursor:grab;
