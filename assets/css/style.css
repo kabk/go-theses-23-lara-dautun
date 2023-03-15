@@ -571,7 +571,7 @@ blockquote{
 
 /* ---- Map page ----*/
 .map-container{
-  height:88vh;
+  height:calc(100vh - 2 * var(--height-block));
   width: var(--width-main-text);
   overflow:hidden;
   cursor:grab;
